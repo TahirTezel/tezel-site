@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tezel İnşaat</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            
+            <!-- SOL MENÜ -->
+            <nav class="nav-left desktop-only">
+                <a href="index.html#biz-kimiz">Biz Kimiz</a>
+                <a href="index.html#projeler">Projeler</a>
+            </nav>
+
+            <!-- LOGO: Absolute Center -->
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo1.png" alt="Tezel İnşaat" class="main-logo-img">
+                    <span class="logo-text"></span>
+                </a>
+            </div>
+
+            <!-- SAĞ MENÜ -->
+            <nav class="nav-right desktop-only">
+                <div class="dropdown">
+                    <span class="dropbtn">Faliyet Alanlarımız</span>
+                    <div class="dropdown-content">
+                        <a href="mimari.html">Mimari</a>
+                        <a href="gayrimenkul.html">Gayrimenkul</a>
+                        <a href="muhendislik.html">Mühendislik</a>
+                    </div>
+                </div>
+                <a href="#iletisim" id="iletisim-link">İletişim</a>
+                
+                <!-- DİL SEÇİCİ KUTUSU -->
+                <div class="lang-box" id="lang-toggle-btn">
+                    <span class="current-lang">EN</span>
+                </div>
+            </nav>
+
+            <!-- MOBİL HAMBURGER BUTONU -->
+            <div class="mobile-menu-btn" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBİL NAVİGASYON PANELİ -->
+    <div class="mobile-nav-panel" id="mobile-nav">
+        <nav>
+            <a href="index.html#biz-kimiz">Biz Kimiz</a>
+            <a href="index.html#projeler">Projeler</a>
+            <a href="mimari.html">Mimari</a>
+            <a href="gayrimenkul.html">Gayrimenkul</a>
+            <a href="muhendislik.html">Mühendislik</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- TANITIM VİDEOSU -->
+        <section class="video-hero">
+            <div class="video-container">
+                <video autoplay muted loop playsinline class="bg-video">
+                    <source src="img/intro3.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+           
+        </section>
+        <!-- SLOGAN BÖLÜMÜ -->
+<section class="slogan-section">
+    <div class="container">
+        <h2 id="slogan-text">Mimari Estetiği, Mühendislik Gücüyle Birleştiriyoruz.</h2>
+    </div>
+</section>
+
+<!-- BİZ KİMİZ & İSTATİSTİK BÖLÜMÜ -->
+<section class="about-section" id="biz-kimiz">
+    <div class="about-container">
+        <div class="about-content">
+            <h3 id="about-title">Biz Kimiz?</h3>
+            <p id="about-desc">
+                Tezel İnşaat & Danışmanlık olarak, gayrimenkulden mimariye, mühendislikten müşavirliğe kadar geniş bir yelpazede yenilikçi çözümler sunuyoruz. Yılların verdiği tecrübe ve modern bakış açımızla, her projeyi bir sanat eseri titizliğiyle ele alıyoruz.
+            </p>
+            
+            <!-- EKSTRA: Rakamlarla Biz (Güven Verici Alan) -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <p class="stat-label" id="stat-years">Yıllık Tecrübe</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <p class="stat-label" id="stat-projects">Tamamlanan Proje</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <p class="stat-label" id="stat-clients">Mutlu Müşteri</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="img/Gemini_Generated_Image_6taisq6taisq6tai (1).png" alt="Biz Kimiz"> <!-- Buraya profesyonel bir ofis veya proje görseli koyabilirsin -->
+        </div>
+    </div>
+</section>
+<!-- PROJELER BÖLÜMÜ -->
+<section class="projects-section" id="projeler">
+    <div class="section-title">
+        <h2 id="projects-main-title">Projelerimiz</h2>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Proje 1 -->
+        <div class="project-card" onclick="openProject('p1')">
+            <div class="project-img-wrapper">
+                <img src="img/2+1hatun4.jpg" alt="Proje 1">
+                <div class="project-overlay">
+                    <span id="view-text-1">Detayları Gör</span>
+                </div>
+            </div>
+            <h3 id="p1-title">Tezel Kaplan Evleri </h3>
+        </div>
+
+        <!-- Proje 2 -->
+        <div class="project-card" onclick="openProject('p2')">
+            <div class="project-img-wrapper">
+                <img src="img/craton1.webp" alt="Proje 2">
+                <div class="project-overlay">
+                    <span id="view-text-2">Detayları Gör</span>
+                </div>
+            </div>
+            <h3 id="p2-title">The Craton Otel </h3>
+        </div>
+
+        <!-- Proje 3 -->
+        <div class="project-card" onclick="openProject('p3')">
+            <div class="project-img-wrapper">
+                <img src="img/terziog4.jpg" alt="Proje 3">
+                <div class="project-overlay">
+                    <span id="view-text-3">Detayları Gör</span>
+                </div>
+            </div>
+            <h3 id="p3-title">Yaşam Kent Evleri </h3>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT DETAY MODAL (Popup) -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeProject()">&times;</span>
+        <div class="modal-body">
+            <!-- Sol Taraf: Proje Görseli -->
+            <div class="modal-left">
+                <img id="modal-img" src="" alt="Proje Görseli">
+            </div>
+            
+            <!-- Sağ Taraf: Detaylı Bilgiler -->
+            <div class="modal-right">
+                <h2 id="modal-title">Proje Başlığı</h2>
+                
+                <!-- Künye Bilgileri (Alt Alta Düzen) -->
+                <div class="project-meta-list">
+                    <div class="meta-item">
+                        <strong id="label-status">Durum:</strong>
+                        <span id="modal-status">Yükleniyor...</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong id="label-loc">Lokasyon:</strong>
+                        <span id="modal-loc">Yükleniyor...</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong id="label-year">Yapım Yılı:</strong>
+                        <span id="modal-year">Yükleniyor...</span>
+                    </div>
+                </div>
+
+                <hr class="modal-divider">
+
+                <!-- Açıklama Bölümü -->
+                <div class="modal-description-area">
+                    <h4 id="label-desc-title">Proje Hakkında</h4>
+                    <p id="modal-desc">Proje detay açıklaması buraya gelecek.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- TÜM PROJELERİ İNCELEYİN (CTA) SECTİON -->
+<section class="cta-projects-section">
+    <div class="cta-content">
+        <h2 id="cta-title">Vizyonumuzu Daha Yakından Tanıyın</h2>
+        <p id="cta-desc">Hayata geçirdiğimiz tüm mimari ve mühendislik projelerini detaylıca incelemek için galeri sayfamızı ziyaret edin.</p>
+        <a href="projeler.html" class="cta-main-btn" id="cta-btn-text">Tüm Projelerimizi Gör</a>
+    </div>
+</section>
+<!-- FAALİYET ALANLARIMIZ -->
+<section class="services-section" id="faaliyet">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="services-main-title">Faaliyet Alanlarımız</h2>
+        </div>
+
+        <div class="services-grid">
+            <!-- Sayfaya Gidecekler -->
+            <div class="service-card" onclick="location.href='mimari.html'">
+                <div class="service-icon"></div>
+                <h3 id="s1-title">Mimari Tasarım</h3>
+                <p id="s1-desc">Estetik ve fonksiyonelliği birleştiren modern yaşam alanları tasarlıyoruz.</p>
+            </div>
+
+            <div class="service-card" onclick="location.href='muhendislik.html'">
+                <div class="service-icon"></div>
+                <h3 id="s2-title">Mühendislik & Statik</h3>
+                <p id="s2-desc">Güçlü altyapı ve güvenilir statik hesaplamalarla yapıları sağlama alıyoruz.</p>
+            </div>
+
+            <div class="service-card" onclick="location.href='gayrimenkul.html'">
+                <div class="service-icon"></div>
+                <h3 id="s3-title">Gayrimenkul Danışmanlığı</h3>
+                <p id="s3-desc">Doğru yatırım ve mülk yönetimi konularında profesyonel rehberlik sunuyoruz.</p>
+            </div>
+
+            <!-- Popup Açacak Olan -->
+            <div class="service-card" onclick="openServiceModal()">
+                <div class="service-icon"></div>
+                <h3 id="s4-title">Proje Yönetimi</h3>
+                <p id="s4-desc">Süreçlerin başından sonuna kadar verimlilik ve kalite kontrolü sağlıyoruz.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HİZMET DETAY MODAL (Proje Yönetimi İçin) -->
+<div id="serviceModal" class="modal">
+    <div class="modal-content service-modal-content">
+        <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+        <div class="modal-body-full">
+            <h2 id="sm-title">Proje Yönetimi & Danışmanlık</h2>
+            <hr>
+            <div class="service-steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <p id="step-1">Bütçe ve Kaynak Planlaması</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <p id="step-2">Saha Denetimi ve Kalite Kontrol</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <p id="step-3">Zaman Çizelgesi ve İş Takibi</p>
+                </div>
+            </div>
+            <a href="#iletisim" class="modal-cta-btn" onclick="closeServiceModal()" id="sm-btn">Bize Ulaşın</a>
+        </div>
+    </div>
+</div>
+<footer class="main-footer" id="iletisim">
+    <div class="footer-container">
+        <!-- SOL: Menü (Sadece Desktop) -->
+        <div class="footer-column footer-nav desktop-only">
+            <h4 id="footer-nav-title">Hızlı Menü</h4>
+            <ul>
+                <li><a href="index.html#biz-kimiz">Biz Kimiz</a></li>
+                <li><a href="index.html#projeler">Projeler</a></li>
+                <li><a href="mimari.html">Mimari</a></li>
+                <li><a href="gayrimenkul.html">Gayrimenkul</a></li>
+                <li><a href="muhendislik.html">Mühendislik</a></li>
+            </ul>
+        </div>
+
+        <!-- ORTA: İletişim -->
+        <div class="footer-column footer-contact">
+            <h4 id="footer-contact-title">İletişim</h4>
+            <p><strong>Adres:</strong> <span id="f-addr">Hafiziye, Sıhke Cd. Kapı No:143 Daire No:1, 65000 İpekyolu/Van</span></p>
+            <p><strong>E-posta:</strong> <a href="mailto:info@incelproje.com">tezel_insaat@hotmail.com</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+905326768700">+90 532 676 87 00</a></p>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong> <a href="tel:+905444463223">+90 544 446 32 23</a></p>
+        </div>
+
+        <!-- SAĞ: Sosyal Medya -->
+        <div class="footer-column footer-social">
+            <h4 id="footer-social-title">Bizi Takip Edin</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/tezel_insaatvan" target="_blank">Instagram</a>
+                <a href="https://wa.me/905326768700" target="_blank">WhatsApp</a>
+                <a href="https://maps.google.com/?q=Hafiziye,+Sıhke+Cd.+Kapı+No:143+Daire+No:1,+65000+İpekyolu/Van" target="_blank">Google Maps</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ALT ŞERİT: Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 <span id="f-copy">TEZEL İNŞAAT. Tüm Hakları Saklıdır.</span></p>
+    </div>
+</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

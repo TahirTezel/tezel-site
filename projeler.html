@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz | Tezel İnşaat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="projeler-style.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <nav class="nav-left desktop-only">
+                <a href="index.html#biz-kimiz">Biz Kimiz</a>
+                <a href="projeler.html" class="active-page">Projeler</a>
+            </nav>
+
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo1.png" alt="Tezel İnşaat" class="main-logo-img">
+                </a>
+            </div>
+
+            <nav class="nav-right desktop-only">
+                <div class="dropdown">
+                    <span class="dropbtn">Faaliyet Alanlarımız</span>
+                    <div class="dropdown-content">
+                        <a href="mimari.html">Mimari</a>
+                        <a href="gayrimenkul.html">Gayrimenkul</a>
+                        <a href="muhendislik.html">Mühendislik</a>
+                    </div>
+                </div>
+                <a href="index.html#iletisim" id="iletisim-link">İletişim</a>
+                <div class="lang-box" id="lang-toggle-btn">
+                    <span class="current-lang">TR</span>
+                </div>
+            </nav>
+
+            <div class="mobile-menu-btn" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-panel" id="mobile-nav">
+        <nav>
+            <a href="index.html#biz-kimiz">Biz Kimiz</a>
+            <a href="projeler.html" class="active-page">Projeler</a>
+            
+            <div class="mobile-dropdown">
+                <div class="mobile-dropdown-content" id="m-dropdown-items">
+                    <a href="mimari.html">Mimari</a>
+                    <a href="gayrimenkul.html">Gayrimenkul</a>
+                    <a href="muhendislik.html">Mühendislik</a>
+                </div>
+            </div>
+            
+            <a href="index.html#iletisim">İletişim</a>
+            
+            <div class="mobile-lang-wrapper">
+                <div id="mobile-lang-toggle" class="mobile-lang-btn">
+                    LANG: <span class="mobile-current-lang">TR</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="projects-wrapper">
+
+    <section class="project-group">
+        <h2 class="group-title" id="title-ongoing">Devam Eden Projeler</h2>
+        <div class="projects-grid">
+
+            <!-- 1. PROJE: Tezel Kaplan Evleri 2. Etap -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="tezel-kaplan-evleri-2-etap"
+                 data-location="Van / Hatuniye" 
+                 data-year="2026"
+                 data-img1="img/2+1devam1.jpeg" 
+                 data-img2="img/2+1devam2.jpeg" 
+                 data-img3="img/2+1devam5.jpeg" 
+                 data-img4="img/2+1devam4.jpeg">
+                <div class="img-container">
+                    <img src="img/2+1devam1.jpeg" alt="2+1 Devam Projesi">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Kaplan Evleri 2. Etap</h4>
+                    <p class="p-desc" style="display: none;">Hatuniye Mahallesi’nde yapımı devam eden 2+1 ikinci etap projemiz...</p>
+                </div>
+            </div>
+
+            <!-- 2. PROJE: Edremit Projesi -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="edremit-projesi"
+                 data-location="Van / Edremit" 
+                 data-year="2026"
+                 data-img1="img/edremit1.jpeg" 
+                 data-img2="img/edremit2.jpeg"
+                 data-img3="img/edremit3.jpeg"
+                 data-img4="img/edremit4.jpeg">
+                <div class="img-container">
+                    <img src="img/edremit1.jpeg" alt="Edremit Projesi">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Edremit Projesi</h4>
+                    <p class="p-desc" style="display: none;">Edremit’in merkezinde konumlanan bu özel proje...</p>
+                </div>
+            </div>
+
+            <!-- 3. PROJE: Tezel Merkez Projesi -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="tezel-merkez-projesi"
+                 data-location="Van / İpekyolu" 
+                 data-year="2026"
+                 data-img1="img/site.png" >
+                <div class="img-container">
+                    <img src="img/site.png" alt="Tezel Projesi 3">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Merkez Projesi</h4>
+                    <p class="p-desc" style="display: none;">Şehrin gelişim aksında yer alan projemiz...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="project-group" style="margin-top: 60px;">
+        <h2 class="group-title" id="title-completed">Tamamlanan Projeler</h2>
+        <div class="projects-grid">
+
+            <!-- 4. PROJE: Tezel Kaplan Evleri 1. Etap -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="tezel-kaplan-evleri-1-etap"
+                 data-location="Van / İpekyolu" 
+                 data-year="2025"
+                 data-img1="img/2+1hatun1.jpg" 
+                 data-img2="img/2+1hatun2.jpg"
+                 data-img3="img/2+1hatun3.jpg"
+                 data-img4="img/2+1hatun4.jpg">
+                <div class="img-container">
+                    <img src="img/2+1hatun4.jpg" alt="Tezel Kaplan Evleri">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Kaplan Evleri 1. Etap</h4>
+                    <p class="p-desc" style="display: none;">Üst düzey yapı kalitesi ve konforlu yaşam alanlarını bir araya getiren...</p>
+                </div>
+            </div>
+
+            <!-- 5. PROJE: Yaşamkent Evleri -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="yasamkent-evleri"
+                 data-location="Van / Merkez" 
+                 data-year="2025"
+                 data-img1="img/terziog1.jpg"
+                 data-img2="img/terziog2.jpg"
+                 data-img3="img/terziog3.jpg"
+                 data-img4="img/terziog4.jpg">
+                <div class="img-container">
+                    <img src="img/terziog4.jpg" alt="Yaşamkent Evleri">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Yaşamkent Evleri</h4>
+                    <p class="p-desc" style="display: none;">Van’ın merkezinde konumlanan, toplam 24 bağımsız bölümden oluşan...</p>
+                </div>
+            </div>
+
+            <!-- 6. PROJE: Tezel Sıhke Evleri -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="tezel-sihke-evleri"
+                 data-location="Van / İpekyolu" 
+                 data-year="2024"
+                 data-img1="img/sıhke.jpg"
+                 data-img2="img/sıhke2.jpg"
+                 data-img3="img/sıhke3.jpg"
+                 data-img4="img/sıhke4.jpg">
+                <div class="img-container">
+                    <img src="img/sıhke4.jpg" alt="Tezel Sıhke Evleri">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Sıhke Evleri</h4>
+                    <p class="p-desc" style="display: none;">Yaşam kalitesini ve estetiği odağına alan 2+1 ve 3+1 konut alternatiflerimiz...</p>
+                </div>
+            </div>
+
+            <!-- 7. PROJE: The Merucure Otel -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="the-merucure-otel"
+                 data-location="Van / Edremit" 
+                 data-year="2024"
+                 data-img1="img/merucure-1.jpg"
+                 data-img2="img/merucure2.jpg"
+                 data-img3="img/merucure3.jpg"
+                 data-img4="img/merucure-4.jpg">
+                <div class="img-container">
+                    <img src="img/merucure-1.jpg" alt="Masal Evi Kreşi">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">The Merucure Otel</h4>
+                    <p class="p-desc" style="display: none;">Geleceğimizin teminatı olan çocuklarımız için...</p>
+                </div>
+            </div>
+
+            <!-- 8. PROJE: The Craton Otel -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="the-craton-otel"
+                 data-location="İstanbul / Şişli" 
+                 data-year="2024"
+                 data-img1="img/craton1.webp"
+                 data-img2="img/craton2.jpg"
+                 data-img3="img/craton3.jpg"
+                 data-img4="img/craton4.jpg">
+                <div class="img-container">
+                    <img src="img/craton1.webp" alt="The Craton Otel">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">The Craton Otel</h4>
+                    <p class="p-desc" style="display: none;">Şehrin ticari kalbinde hayata geçirilen modern ofis ve dükkan projesi...</p>
+                </div>
+            </div>
+
+            <!-- 9. PROJE: Tezel Family Residences -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="tezel-family-residences"
+                 data-location="Van / İpekyolu" 
+                 data-year="2018"
+                 data-img1="img/ataturk1.jpg"
+                 data-img2="img/ataturk2.jpg"
+                 data-img3="img/ataturk3.jpg"
+                 data-img4="img/ataturk4.jpg">
+                <div class="img-container">
+                    <img src="img/ataturk1.jpg" alt="Tezel Family Residences">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Family Residences</h4>
+                    <p class="p-desc" style="display: none;">Geniş aile yapısına uygun, ferah yeşil alanları...</p>
+                </div>
+            </div>
+
+            <!-- 10. PROJE: İki Nisan Apartmanı -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="iki-nisan-apartmani"
+                 data-location="Van / İpekyolu" 
+                 data-year="2019"
+                 data-img1="img/ikinisan.jpeg"
+                 data-img2="img/ikinisan2.jpeg"
+                 data-img3="img/ikinisan3.jpeg">
+                <div class="img-container">
+                    <img src="img/ikinisan.jpeg" alt="İki Nisan Apartmanı">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">İki Nisan Apartmanı</h4>
+                    <p class="p-desc" style="display: none;">Deprem yönetmeliğine tam uyumlu, radye temel sistemiyle...</p>
+                </div>
+            </div>
+
+            <!-- 11. PROJE: Masal Evi Kreşi -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="masal-evi-kresi"
+                 data-location="Van / Edremit" 
+                 data-year="2022"
+                 data-img1="img/kres1.jpg"
+                 data-img2="img/kres2.jpg"
+                 data-img3="img/kres3.jpg"
+                 data-img4="img/kres4.jpg">
+                <div class="img-container">
+                    <img src="img/kres1.jpg" alt="Masal Evi Kreşi">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Masal Evi Kreşi</h4>
+                    <p class="p-desc" style="display: none;">Van Gölü manzarasına tam hakim, müstakil bahçeli...</p>
+                </div>
+            </div>
+
+            <!-- 12. PROJE: Kahraman Villa -->
+            <div class="project-card" onclick="openModal(this)" 
+                 data-slug="kahraman-villa"
+                 data-location="Van / Edremit" 
+                 data-year="2022"
+                 data-img1="img/ismailvilla1.jpeg"
+                 data-img2="img/ismailvilla2.jpeg"
+                 data-img3="img/ismailvilla3.jpeg"
+                 data-img4="img/ismailvilla4.jpeg"
+                 data-img5="img/ismailvilla5.jpeg">
+                <div class="img-container">
+                    <img src="img/ismailvilla1.jpeg" alt="Kahraman Villa">
+                    <div class="card-overlay"><span>DETAYLARI GÖR</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Kahraman Villa</h4>
+                    <p class="p-desc" style="display: none;">Van Gölü manzarasına tam hakim, müstakil bahçeli...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+    <div id="projectModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-slider">
+                    <button class="slider-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <div id="slider-container"></div>
+                    <button class="slider-nav next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    
+                    <div class="project-meta-data">
+                        <div class="meta-item"><strong>Durum:</strong> <span id="modal-status">-</span></div>
+                        <div class="meta-item"><strong>Yer:</strong> <span id="modal-location">-</span></div>
+                        <div class="meta-item"><strong>Yıl:</strong> <span id="modal-year">-</span></div>
+                    </div>
+                    
+                    <p id="modal-desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer" id="iletisim">
+        <div class="footer-container">
+            <div class="footer-column footer-nav desktop-only">
+                <h4 id="footer-nav-title">Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html#biz-kimiz">Biz Kimiz</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                    <li><a href="mimari.html">Mimari</a></li>
+                    <li><a href="gayrimenkul.html">Gayrimenkul</a></li>
+                    <li><a href="muhendislik.html">Mühendislik</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4 id="footer-contact-title">İletişim</h4>
+                <p><strong id="lbl-f-addr">Adres:</strong> <span id="f-addr">Hafiziye, Sıhke Cd. Kapı No:143 Daire No:1, 65000 İpekyolu/Van</span></p>
+                <p><strong id="lbl-f-mail">E-posta:</strong> <a href="mailto:tezel_insaat@hotmail.com">tezel_insaat@hotmail.com</a></p>
+                <p><strong id="lbl-f-tel1">Telefon:</strong> <a href="tel:+905326768700">+90 532 676 87 00</a></p>
+                <p><strong id="lbl-f-tel2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong> <a href="tel:+905444463223">+90 544 446 32 23</a></p>
+            </div>
+
+            <div class="footer-column footer-social">
+                <h4 id="footer-social-title">Bizi Takip Edin</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/tezel_insaatvan" target="_blank">Instagram</a>
+                    <a href="https://wa.me/905326768700" target="_blank">WhatsApp</a>
+                    <a href="https://www.facebook.com/tezelinsaat" target="_blank">Facebook</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span id="f-copy">TEZEL İNŞAAT. Tüm Hakları Saklıdır.</span></p>
+        </div>
+    </footer>
+    
+    <script src="projeler-script.js"></script>
+
+    <div id="lightbox-system" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImg(-1, event)">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" onclick="changeLightboxImg(1, event)">&#10095;</button>
+        <img id="lightbox-img" src="" alt="Tezel İnşaat Proje Detayı">
+    </div>
+</body>
+</html>

@@ -1,0 +1,515 @@
+/* 1. SIFIRLAMA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* 2. HEADER */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 140px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* LOGO MERKEZLEME */
+.logo-area {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.main-logo-img {
+    height: 85px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    color: #000;
+    margin-top: 5px;
+    display: block;
+    white-space: nowrap;
+}
+
+/* MENÜLER */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    min-width: 400px; /* Logo için boşluk bırakır */
+}
+
+.nav-left { justify-content: flex-start; gap: 40px; }
+.nav-right { justify-content: flex-end; gap: 40px; }
+
+.nav-left a, .nav-right a, .dropbtn {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* DİL KUTUSU */
+.lang-box {
+    border: 2px solid #333;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.lang-box:hover { background: #333; color: #fff; }
+
+/* DROPDOWN */
+.dropdown { position: relative; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a { display: block; padding: 12px 20px; color: #333; border: none; }
+
+/* 3. MOBİL MENÜ & HAMBURGER */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.mobile-nav-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    z-index: 999;
+    padding: 100px 30px;
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.mobile-nav-panel.active { right: 0; }
+.mobile-nav-panel a { display: block; padding: 15px 0; font-size: 18px; color: #333; border-bottom: 1px solid #eee; }
+
+/* Hamburger X Animasyonu */
+.mobile-menu-btn.open span:nth-child(1) { transform: rotate(-45deg) translate(-6px, 6px); }
+.mobile-menu-btn.open span:nth-child(2) { opacity: 0; }
+.mobile-menu-btn.open span:nth-child(3) { transform: rotate(45deg) translate(-6px, -6px); }
+
+/* MÜHENDİSLİK SAYFASI - ÇAKIŞMA ÖNLEYİCİ STİLLER */
+.eng-main-wrapper {
+    display: block !important; /* Görünürlüğü zorla */
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 120px; /* HEADER'IN ALTINDA KALMASINI ENGELLER */
+    padding-bottom: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.eng-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Üst Metin Grubu */
+.eng-intro-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.eng-label {
+    color: #c5a059; /* Mimariyle uyumlu olsun diye gold bıraktım */
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.eng-title {
+    font-size: 32px;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.eng-line {
+    width: 60px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 0 auto 25px;
+}
+
+.eng-paragraph {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Kart Yapısı */
+.eng-services-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.eng-service-item {
+    background: #fff;
+    padding: 40px 25px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+    border-radius: 5px;
+}
+
+.eng-service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+    border-color: #2c3e50;
+}
+
+.eng-service-item i {
+    font-size: 40px;
+    color: #2c3e50; /* Mühendislik antrasiti */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.eng-service-item h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.eng-service-item p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* MOBİL AYAR */
+@media (max-width: 768px) {
+    .eng-main-wrapper { padding-top: 100px; }
+    .eng-title { font-size: 26px; }
+}
+
+/* STATİK PROJE ÖRNEKLERİ STİLLERİ */
+.eng-projects-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.eng-projects-flex {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.eng-project-box {
+    background: #fff;
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.eng-project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.eng-project-img {
+    display: block; /* Linkin alanı kaplaması için */
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.eng-project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Overlay sildiğimiz için hover etkisini resme veriyoruz */
+.eng-project-box:hover .eng-project-img img { 
+    transform: scale(1.1); 
+}
+
+.eng-project-info {
+    padding: 25px;
+}
+
+.eng-project-info h4 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.eng-project-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.eng-project-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.eng-project-tags li {
+    font-size: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+    background: #f0f2f5;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.eng-project-tags i {
+    margin-right: 5px;
+    color: #c5a059;
+}
+
+/* LIGHTBOX MODAL (Açılır Pencere) */
+.eng-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.92);
+    align-items: center;
+    justify-content: center;
+}
+
+.eng-modal-content {
+    max-width: 90%;
+    max-height: 85vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from {transform:scale(0.8); opacity: 0;} 
+    to {transform:scale(1); opacity: 1;}
+}
+
+.eng-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.eng-close:hover { color: #c5a059; }
+
+@media (max-width: 768px) {
+    .eng-projects-flex { gap: 20px; }
+    .eng-modal-content { width: 95%; }
+}
+/* MOBİL UYUMLULUK */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr; /* Mobilde kartlar tek sıra olur */
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+}
+/* REFERANS BAŞLIĞINI KAYDIRMA VE HİZALAMA */
+.eng-section-title {
+    margin-top: 50px;     /* Üstteki hizmet kartlarıyla arasına net bir boşluk bırakır */
+    margin-bottom: 30px;  /* Alttaki görsellerle arasına nefes alacak bir alan açar */
+    padding-left: 10%;    /* Başlığı sol kenardan içeri doğru kaydırarak logonun hizasına yaklaştırır */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main-footer {
+    background-color: #1a1a1a; /* Koyu, şık bir zemin */
+    color: #fff;
+    padding: 80px 60px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: #d4a373; /* Logodaki vurgu rengi */
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column ul { list-style: none; }
+.footer-column ul li { margin-bottom: 12px; }
+.footer-column a { color: #ccc; transition: 0.3s; font-size: 15px; }
+.footer-column a:hover { color: #fff; }
+
+.footer-contact p { margin-bottom: 12px; color: #ccc; font-size: 15px; }
+
+.social-icons { display: flex; gap: 20px; }
+.social-icons a { 
+    background: #333; 
+    padding: 8px 15px; 
+    border-radius: 4px; 
+    font-size: 14px;
+}
+.social-icons a:hover { background: #d4a373; }
+
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Mobilde her şey alt alta */
+        text-align: center;
+    }
+    .footer-nav { display: none; } /* Senin istediğin gibi mobil için menüyü gizledik */
+    .social-icons { justify-content: center; }
+    .main-footer { padding: 50px 20px 20px; }
+}
+/* --- MOBİL GÖRÜNÜMÜ TAMİR ET --- */
+@media (max-width: 1100px) {
+    /* 1. Masaüstü linklerini gizle */
+    .nav-left, .nav-right {
+        display: none !important;
+    }
+
+    /* 2. Header'ı mobil için düzenle */
+    .header-container {
+        justify-content: space-between; /* Logo sola, buton sağa */
+        padding: 0 20px;
+    }
+
+    /* 3. Logoyu ortadan sola çek (opsiyonel ama butonla çakışmaz) */
+    .logo-area {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        z-index: 10;
+    }
+
+    .main-logo-img {
+        height: 60px; /* Mobilde biraz küçülttük */
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    /* 4. Hamburger butonunu zorla görünür yap */
+    .mobile-menu-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        z-index: 2001; /* Her şeyin üstünde olsun */
+    }
+
+    .mobile-menu-btn span {
+        width: 30px;
+        height: 3px;
+        background-color: #333; /* Çizgi rengi koyu olsun */
+        margin: 4px 0;
+        display: block;
+    }
+
+    /* 5. Panel ayarı */
+    .mobile-nav-panel {
+        display: block !important;
+        background: #ffffff;
+    }
+}

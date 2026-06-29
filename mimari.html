@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimari Projeler </title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Dosyaların -->
+    <link rel="stylesheet" href="mimari-style.css"> <!-- Bu sayfaya özel CSS -->
+    
+    <!-- İkonlar (FontAwesome vb. kullanıyorsan ekleyebilirsin) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <header class="main-header">
+        <div class="header-container">
+            
+            <!-- SOL MENÜ -->
+            <nav class="nav-left desktop-only">
+                <a href="index.html#biz-kimiz">Biz Kimiz</a>
+                <a href="index.html#projeler">Projeler</a>
+            </nav>
+
+            <!-- LOGO: Absolute Center -->
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo1.png" alt="Tezel İnşaat" class="main-logo-img">
+                    <span class="logo-text"></span>
+                </a>
+            </div>
+
+            <!-- SAĞ MENÜ -->
+            <nav class="nav-right desktop-only">
+                <div class="dropdown">
+                    <span class="dropbtn">Faliyet Alanlarımız</span>
+                    <div class="dropdown-content">
+                        <a href="mimari.html">Mimari</a>
+                        <a href="gayrimenkul.html">Gayrimenkul</a>
+                        <a href="muhendislik.html">Mühendislik</a>
+                    </div>
+                </div>
+                <a href="#iletisim" id="iletisim-link">İletişim</a>
+                
+                <!-- DİL SEÇİCİ KUTUSU -->
+                <div class="lang-box" id="lang-toggle-btn">
+                    <span class="current-lang">EN</span>
+                </div>
+            </nav>
+
+            <!-- MOBİL HAMBURGER BUTONU -->
+            <div class="mobile-menu-btn" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBİL NAVİGASYON PANELİ -->
+    <div class="mobile-nav-panel" id="mobile-nav">
+        <nav>
+            <a href="index.html#biz-kimiz">Biz Kimiz</a>
+            <a href="index.html#projeler">Projeler</a>
+            <a href="index.html#Faaliyet-Alanlarimiz">Faaliyet Alanlarımız</a>
+            <a href="mimari.html">Mimari</a>
+            <a href="gayrimenkul.html">Gayrimenkul</a>
+            <a href="muhendislik.html">Mühendislik</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </div>
+
+    <!-- MİMARİ VİZYON VE HİZMETLER -->
+<section class="arch-intro-section">
+    <div class="arch-container">
+        
+        <!-- ÜST BAŞLIK VE YAKLAŞIM -->
+        <div class="arch-approach-box">
+            <h5 class="arch-sub-title">PROFESYONEL YAKLAŞIMIMIZ</h5>
+            <h2 class="arch-slogan">"Mekana Ruh Katan, Geleceği Şekillendiren Çizgiler"</h2>
+            
+            <div class="arch-description">
+                <p>
+                    Tezel Mimarlık olarak biz, yapıyı sadece bir beton kütlesi değil; içinde hayatın aktığı, 
+                    duyguları olan bir organizma olarak görüyoruz. Mimari yaklaşımımız; modern estetiğin 
+                    matematiksel hassasiyetle, kullanıcı konforunun ise sürdürülebilir tasarımla harmanlanması 
+                    üzerine kuruludur.
+                </p>
+                <p>
+                    Van’ın yerel dokusundan İstanbul’un global dinamizmine kadar geniş bir coğrafyada, 
+                    her projenin kendi karakterini yaratıyor ve tasarımın gücünü mühendislik dehasıyla 
+                    birleştiriyoruz. Bizim için mimarlık; bugünü tasarlarken yarını hayal etmektir.
+                </p>
+            </div>
+        </div>
+
+        <hr class="arch-divider">
+
+        <!-- MİMARİ HİZMETLERİMİZ -->
+        <div class="arch-services-header">
+            <h2 class="group-title">MİMARİ HİZMETLERİMİZ</h2>
+        </div>
+
+        <div class="arch-services-grid">
+            <!-- Hizmet 1 -->
+            <div class="arch-service-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Mimari Projelendirme</h3>
+                <p>Konsept tasarımdan ruhsatlandırma sürecine kadar, mevzuata hakim ve estetik odaklı proje geliştirme.</p>
+            </div>
+
+            <!-- Hizmet 2 -->
+            <div class="arch-service-card">
+                <i class="fas fa-home"></i>
+                <h3>İç Mimari & Dekorasyon</h3>
+                <p>İç mekanlarda malzeme kalitesini ve ergonomiyi ön planda tutan, size özel lüks yaşam alanları.</p>
+            </div>
+
+            <!-- Hizmet 3 -->
+            <div class="arch-service-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>3D Modelleme & Render</h3>
+                <p>Projenizi henüz inşa edilmeden önce fotogerçekçi teknolojilerle dijital ortamda deneyimleme şansı.</p>
+            </div>
+
+            <!-- Hizmet 4 -->
+            <div class="arch-service-card">
+                <i class="fas fa-hard-hat"></i>
+                <h3>Uygulama & Kontrolörlük</h3>
+                <p>Çizilen her detayın sahada kusursuzca hayata geçirilmesi için titiz şantiye takibi ve danışmanlık.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- MİMARİ PROJE PORTFÖYÜ -->
+<section class="projects-wrapper">
+    <div class="arch-container">
+        <h2 class="group-title">MİMARİ PROJE PORTFÖYÜ</h2>
+        
+        <div class="projects-grid">
+            
+            <!-- Proje M1 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m1"
+                 data-img1="img/2+1devam1.jpeg" 
+                 data-img2="img/2+1devam2.jpeg" 
+                 data-img3="img/2+1devam3.jpeg" 
+                 data-img4="img/2+1devam4.jpeg">
+                <div class="img-container">
+                    <img src="img/2+1devam1.jpeg" alt="Mimari Proje 1">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">2+1devam</h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+
+            <!-- Proje M2 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m2"
+                 data-img1="img/2+1hatun4.jpg" 
+                 data-img2="img/2+1hatun2.jpg" 
+                 data-img3="img/2+1hatun3.jpg" 
+                 data-img4="img/2+1hatun4.jpg">
+                <div class="img-container">
+                    <img src="img/2+1hatun4.jpg" alt="Mimari Proje 2">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Kaplan Evleri</h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+
+            <!-- Proje M3 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m3"
+                 data-img1="img/faruk1.jpg" 
+                 data-img2="img/faruk2.jpg" 
+                 data-img3="img/faruk3.jpg" 
+                 data-img4="img/faruk4.jpg">
+                <div class="img-container">
+                    <img src="img/faruk1.jpg" alt="Mimari Proje 3">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Arya Apartmanı</h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+
+            <!-- Proje M4 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m4"
+                 data-img1="img/atacan1.jpg"
+                  data-img2="img/atacan2.jpg" 
+                  data-img3="img/atacan3.jpg" 
+                  data-img4="img/atacan4.jpg">
+                <div class="img-container">
+                    <img src="img/atacan1.jpg" alt="Mimari Proje 4">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name"> Atacan İnşaat </h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+
+            <!-- Proje M5 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m5"
+                 data-img1="img/caldıran1.jpg" 
+                 data-img2="img/caldıran2.jpg"
+                 data-img3="img/caldıran3.jpg" 
+                 data-img4="img/caldıran4.jpg">
+                <div class="img-container">
+                    <img src="img/caldıran1.jpg" alt="Mimari Proje 5">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Çaldıran İnşaat</h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+
+            <!-- Proje M6 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m6"
+                 data-img1="img/edremit1.jpeg" 
+                 data-img2="img/edremit2.jpeg" 
+                 data-img3="img/edremit3.jpeg" 
+                 data-img4="img/edremit4.jpeg">
+                <div class="img-container">
+                    <img src="img/edremit1.jpeg" alt="Mimari Proje 6">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">edremit</h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+            <!-- Proje M7 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m7"
+                 data-img1="img/sıhke4.jpg" 
+                 data-img2="img/sıhke3.jpg" 
+                 data-img3="img/sıhke2.jpg" 
+                 data-img4="img/sıhke.jpg">
+                <div class="img-container">
+                    <img src="img/sıhke4.jpg" alt="Mimari Proje 7">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Tezel Sıhke Evleri</h4>
+                    <p class="p-status">Mimari Projelendirme </p>
+                </div>
+            </div>
+
+            <!-- Proje M8 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m8"
+                 data-img1="img/kres1.jpg" 
+                 data-img2="img/kres2.jpg" 
+                 data-img3="img/kres3.jpg" 
+                 data-img4="img/kres4.jpg">
+                <div class="img-container">
+                    <img src="img/kres1.jpg" alt="Mimari Proje 8">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Masal Evi</h4>
+                    <p class="p-status">Dekorasyon</p>
+                </div>
+            </div>
+            <!-- Proje M9 -->
+            <div class="project-card" onclick="openModal(this)" data-id="m9"
+                 data-img1="img/ismailvilla1.jpeg" 
+                 data-img2="img/ismailvilla2.jpeg" 
+                 data-img3="img/ismailvilla3.jpeg" 
+                 data-img4="img/ismailvilla4.jpeg" 
+                 data-img5="img/ismailvilla5.jpeg">
+                <div class="img-container">
+                    <img src="img/ismailvilla1.jpeg" alt="Mimari Proje 9">
+                    <div class="card-overlay"><span>TASARIMI İNCELE</span></div>
+                </div>
+                <div class="project-info-bottom">
+                    <h4 class="p-name">Kahraman Villa</h4>
+                    <p class="p-status">Dekorasyon</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJE DETAY MODALİ -->
+ <!-- PROJE DETAY MODAL (SLIDER) -->
+<div id="projectModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-slider">
+                <button class="slider-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div id="slider-container">
+                    <!-- Resimler JS ile buraya gelecek -->
+                </div>
+                <button class="slider-nav next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <div class="modal-info">
+                <h2 id="modal-title">Proje Başlığı</h2>
+                <p id="modal-desc">Proje açıklaması buraya gelecek.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="main-footer" id="iletisim">
+    <div class="footer-container">
+        <!-- SOL: Menü (Sadece Desktop) -->
+        <div class="footer-column footer-nav desktop-only">
+            <h4 id="footer-nav-title">Hızlı Menü</h4>
+            <ul>
+                <li><a href="index.html#biz-kimiz">Biz Kimiz</a></li>
+                <li><a href="index.html#projeler">Projeler</a></li>
+                <li><a href="mimari.html">Mimari</a></li>
+                <li><a href="gayrimenkul.html">Gayrimenkul</a></li>
+                <li><a href="muhendislik.html">Mühendislik</a></li>
+            </ul>
+        </div>
+
+        <!-- ORTA: İletişim -->
+        <div class="footer-column footer-contact">
+            <h4 id="footer-contact-title">İletişim</h4>
+            <p><strong>Adres:</strong> <span id="f-addr">Hafiziye, Sıhke Cd. Kapı No:143 Daire No:1, 65000 İpekyolu/Van</span></p>
+            <p><strong>E-posta:</strong> <a href="mailto:info@incelproje.com">tezel_insaat@hotmail.com</a></p>
+            <p><strong>Telefon 1:</strong> <a href="tel:+905326768700">+90 532 676 87 00</a></p>
+            <p><strong>Telefon 2:</strong> <a href="tel:+905444463223">+90 544 446 32 23</a></p>
+        </div>
+
+        <!-- SAĞ: Sosyal Medya -->
+        <div class="footer-column footer-social">
+            <h4 id="footer-social-title">Bizi Takip Edin</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/tezel_insaatvan" target="_blank">Instagram</a>
+                <a href="https://wa.me/905326768700" target="_blank">WhatsApp</a>
+                <a href="https://maps.google.com/?q=Hafiziye,+Sıhke+Cd.+Kapı+No:143+Daire+No:1,+65000+İpekyolu/Van" target="_blank">Google Maps</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ALT ŞERİT: Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 <span id="f-copy">TEZEL İNŞAAT. Tüm Hakları Saklıdır.</span></p>
+    </div>
+</footer>
+    </main>
+    <!-- JavaScript Dosyaları -->
+    <script src="mimari-script.js"></script> <!-- Bu sayfaya özel JS -->  
+
+</body>
+</html>
