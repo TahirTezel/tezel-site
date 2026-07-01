@@ -513,3 +513,29 @@ body {
         background: #ffffff;
     }
 }
+/* ==========================================
+   MOBİL DİL SEÇİCİ EK CSS
+   ========================================== */
+.mobile-nav-panel .lang-box {
+    display: inline-block;
+    margin-top: 25px;
+    border: 2px solid #333;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.mobile-nav-panel .lang-box:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Mobil paneli dikeyde güzel ortalamak için */
+.mobile-nav-panel nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* İstersen butonların merkeze gelmesi için center yapabilirsin */
+}

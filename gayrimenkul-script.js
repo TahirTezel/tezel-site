@@ -68,10 +68,16 @@ function updatePageLanguage() {
     const t = translations[currentLang];
     document.documentElement.lang = currentLang.toLowerCase();
 
-    // Dil seçici kutusunun üstündeki yazıyı (TR/EN) anlık güncelle
+    // 1. Masaüstü Dil Seçici Yazısı
     const currentLangSpan = document.querySelector('#lang-toggle-btn .current-lang');
     if (currentLangSpan) {
         currentLangSpan.innerText = currentLang;
+    }
+
+    // 2. Mobil Dil Seçici Yazısı (Yeni Eklendi)
+    const mobileLangSpan = document.querySelector('#lang-toggle-btn-mobile .current-lang');
+    if (mobileLangSpan) {
+        mobileLangSpan.innerText = currentLang;
     }
 
     // --- HEADER & MENÜLER ---
@@ -85,8 +91,12 @@ function updatePageLanguage() {
             link.innerText = t.nav_projects;
         } else if (href.includes("#iletisim") || link.id === "iletisim-link") {
             link.innerText = t.nav_contact;
-        } else if (href.includes("#Faaliyet-Alanlarimiz")) {
-            link.innerText = t.nav_fields;
+        } else if (href.includes("#Faaliyet-Alanlarimiz") || href.includes("mimari.html") || href.includes("gayrimenkul.html") || href.includes("muhendislik.html")) {
+            // Mobil menü linklerinin çeviri uyumsuzluğunu önlemek için genişletildi
+            if (href.includes("mimari.html")) link.innerText = (currentLang === "TR") ? "Mimari" : "Architecture";
+            else if (href.includes("gayrimenkul.html")) link.innerText = (currentLang === "TR") ? "Gayrimenkul" : "Real Estate";
+            else if (href.includes("muhendislik.html")) link.innerText = (currentLang === "TR") ? "Mühendislik" : "Engineering";
+            else link.innerText = t.nav_fields;
         }
     });
 
@@ -141,23 +151,17 @@ function updatePageLanguage() {
     if (document.getElementById('f-copy')) document.getElementById('f-copy').innerText = t.footer_copy;
 }
 
+// Ortak Dil Değiştirme Tetikleyicisi
+function toggleLanguage() {
+    currentLang = (currentLang === "TR") ? "EN" : "TR";
+    localStorage.setItem('selectedLang', currentLang); // Yeni dili tarayıcıya kaydet
+    updatePageLanguage(); // Sayfayı yenilemeden metinleri değiştir
+}
+
 // 3. SAYFA ETKİLEŞİMLERİ VE YÜKLENME DURUMU
 document.addEventListener('DOMContentLoaded', () => {
     
-    // DÜZELTME: Sayfa yüklenir yüklenmez hafızadaki dili derhal çalıştırır
-    updatePageLanguage();
-
-    // Dil Değiştirme Butonu Dinleyicisi
-    const langBtn = document.getElementById('lang-toggle-btn');
-    if (langBtn) {
-        langBtn.addEventListener('click', () => {
-            currentLang = (currentLang === "TR") ? "EN" : "TR";
-            localStorage.setItem('selectedLang', currentLang); // Yeni dili tarayıcıya kaydet
-            updatePageLanguage(); // Sayfayı yenilemeden metinleri değiştir
-        });
-    }
-
-    // Mobil Menü Hamburger Etkileşimi
+    // Mobil Menü Hamburger Etkileşimi (Çakışmalar Tamamen Engellendi)
     const menuBtn = document.getElementById('menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
     if (menuBtn && mobileNav) {
@@ -165,6 +169,18 @@ document.addEventListener('DOMContentLoaded', () => {
             menuBtn.classList.toggle('open');
             mobileNav.classList.toggle('active');
         });
+    }
+
+    // Masaüstü Dil Değiştirme Butonu Dinleyicisi
+    const langBtn = document.getElementById('lang-toggle-btn');
+    if (langBtn) {
+        langBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // Mobil Dil Değiştirme Butonu Dinleyicisi (Yeni Eklendi)
+    const mobileLangBtn = document.getElementById('lang-toggle-btn-mobile');
+    if (mobileLangBtn) {
+        mobileLangBtn.addEventListener('click', toggleLanguage);
     }
 
     // Header Scroll Efekti
@@ -175,4 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else header.classList.remove('scrolled');
         }
     });
+
+    // Sayfa yüklenir yüklenmez hafızadaki dili derhal çalıştırır
+    updatePageLanguage();
 });

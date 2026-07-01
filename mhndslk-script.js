@@ -12,7 +12,7 @@ const translations = {
         nav_contact: "İletişim",
         eng_sub: "TEKNİK ÇÖZÜM ORTAĞINIZ",
         eng_title: "Mühendislikte Hassasiyet, Yapıda Güven",
-        eng_desc: "Tezel Mühendislik olarak, modern mühendislik çözümlerini uluslararası standartlarla harmanlayarak yapılarınızın güvenliğini garanti altına alıyoruz.",
+        eng_desc: "Tezel Mühendislik olarak, modern mühendislik solutionsunu uluslararası standartlarla harmanlayarak yapılarınızın güvenliğini garanti altına alıyoruz.",
         s1_t: "Statik Proje", s1_d: "Betonarme ve çelik yapıların statik hesaplarını sıfır hata prensibiyle hazırlıyoruz.",
         s2_t: "Zemin Etüdü", s2_d: "Yapı zeminini bilimsel yöntemlerle analiz ederek en uygun temel sistemini kuruyoruz.",
         s3_t: "Teknik Uygulama", s3_d: "Şantiye aşamasında projenin standartlara uygunluğunu titizlikle denetliyoruz.",
@@ -60,13 +60,19 @@ function updatePageLanguage() {
     const t = translations[currentLang];
     document.documentElement.lang = currentLang.toLowerCase();
 
-    // Dil seçici kutusunu senkronize et
+    // 1. Masaüstü Dil Seçici Yazısı
     const currentLangSpan = document.querySelector('#lang-toggle-btn .current-lang');
     if (currentLangSpan) {
         currentLangSpan.innerText = currentLang;
     }
 
-    // 1. Menü Linkleri (Üst Açılır Menü ve Mobil Dahil Gelişmiş Yakalayıcı)
+    // 2. Mobil Dil Seçici Yazısı (Yeni Eklendi)
+    const mobileLangSpan = document.querySelector('#lang-toggle-btn-mobile .current-lang');
+    if (mobileLangSpan) {
+        mobileLangSpan.innerText = currentLang;
+    }
+
+    // --- Menü Linkleri (Üst Açılır Menü ve Mobil Dahil Gelişmiş Yakalayıcı) ---
     document.querySelectorAll('.nav-left a, .nav-right a, .mobile-nav-panel a, .footer-nav a, .dropdown-content a').forEach(link => {
         const href = link.getAttribute('href') || "";
         
@@ -82,16 +88,16 @@ function updatePageLanguage() {
         if (href.includes("#Faaliyet-Alanlarimiz")) link.innerText = t.nav_fields;
     });
 
-    // 2. Dropdown Butonu
+    // --- Dropdown Butonu ---
     const dropBtn = document.querySelector('.dropbtn');
     if (dropBtn) dropBtn.innerText = t.nav_fields;
 
-    // 3. Giriş Bölümü
+    // --- Giriş Bölümü ---
     const label = document.querySelector('.eng-label'); if(label) label.innerText = t.eng_sub;
     const title = document.querySelector('.eng-title'); if(title) title.innerText = t.eng_title;
     const desc = document.querySelector('.eng-paragraph'); if(desc) desc.innerText = t.eng_desc;
 
-    // 4. Hizmet Kartları
+    // --- Hizmet Kartları ---
     const serviceCards = document.querySelectorAll('.eng-service-item');
     serviceCards.forEach((card, index) => {
         const h3 = card.querySelector('h3');
@@ -100,7 +106,7 @@ function updatePageLanguage() {
         if(p) p.innerText = t[`s${index + 1}_d`];
     });
 
-    // 5. Statik Proje Kutuları (Tıklanabilir Overlay Dahil)
+    // --- Statik Proje Kutuları (Tıklanabilir Overlay Dahil) ---
     const sectionTitle = document.querySelector('.eng-section-title'); if(sectionTitle) sectionTitle.innerText = t.proj_title;
     const projectBoxes = document.querySelectorAll('.eng-project-box');
     projectBoxes.forEach((box, index) => {
@@ -116,47 +122,56 @@ function updatePageLanguage() {
         if(tags[1]) tags[1].innerHTML = `<i class="fas fa-check"></i> ${t[`p${index + 1}_tag2`]}`;
     });
 
-    // 6. Footer Alanları
+    // --- Footer Alanları ---
     const footNav = document.getElementById('footer-nav-title'); if(footNav) footNav.innerText = t.footer_fast;
     const footContact = document.getElementById('footer-contact-title'); if(footContact) footContact.innerText = t.footer_contact;
     const footSocial = document.getElementById('footer-social-title'); if(footSocial) footSocial.innerText = t.footer_follow;
     const footCopy = document.getElementById('f-copy'); if(footCopy) footCopy.innerText = t.footer_copy;
 }
 
+// Ortak Dil Değiştirme Tetikleyicisi
+function toggleLanguage() {
+    currentLang = (currentLang === "TR") ? "EN" : "TR";
+    localStorage.setItem('selectedLang', currentLang); // Seçilen yeni dili hafızaya kaydeder
+    updatePageLanguage();
+}
+
 // ETKİLEŞİMLER
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Sayfa yüklenir yüklenmez hafızadaki dili tarayıp uygular
-    updatePageLanguage();
-    
-    // DİL BUTONU
-    const langBtn = document.getElementById('lang-toggle-btn');
-    if (langBtn) {
-        langBtn.style.cursor = "pointer";
-        langBtn.onclick = function() {
-            currentLang = (currentLang === "TR") ? "EN" : "TR";
-            localStorage.setItem('selectedLang', currentLang); // Seçilen yeni dili hafızaya kaydeder
-            const span = this.querySelector('.current-lang');
-            if(span) span.innerText = currentLang;
-            updatePageLanguage();
-        };
-    }
-
-    // MOBİL MENÜ & SCROLL
+    // Hamburger Menü Yönetimi (Daha güvenli hale getirildi)
     const menuToggle = document.getElementById('menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
     if (menuToggle && mobileNav) {
-        menuToggle.onclick = function() {
-            this.classList.toggle('open');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
             mobileNav.classList.toggle('active');
-        };
+        });
     }
 
-    window.onscroll = function() {
+    // Masaüstü Dil Değiştirme Butonu Dinleyicisi
+    const langBtn = document.getElementById('lang-toggle-btn');
+    if (langBtn) {
+        langBtn.style.cursor = "pointer";
+        langBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // Mobil Dil Değiştirme Butonu Dinleyicisi (Yeni Eklendi)
+    const mobileLangBtn = document.getElementById('lang-toggle-btn-mobile');
+    if (mobileLangBtn) {
+        mobileLangBtn.style.cursor = "pointer";
+        mobileLangBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // Header Scroll Efekti
+    window.addEventListener('scroll', () => {
         const header = document.querySelector('.main-header');
         if (header) {
             if (window.scrollY > 50) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
         }
-    };
+    });
+
+    // Sayfa yüklenir yüklenmez hafızadaki dili derhal uygular
+    updatePageLanguage();
 });

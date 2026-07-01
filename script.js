@@ -20,9 +20,9 @@ const translations = {
         
         // Projeler (Genel Başlıklar)
         "projects-main-title": "Örnek Projelerimiz",
-        "p1-title": "Modern Konut Kompleksi",
-        "p2-title": "Endüstriyel Yapı Tasarımı",
-        "p3-title": "Şehir Planlama Projesi",
+        "p1-title": "",
+        "p2-title": "",
+        "p3-title": "",
         "view-text-1": "Detayları Gör",
         "view-text-2": "Detayları Gör",
         "view-text-3": "Detayları Gör",
@@ -71,9 +71,9 @@ const translations = {
         "stat-clients": "Happy Clients",
         
         "projects-main-title": "Featured Projects",
-        "p1-title": "Modern Residential Complex",
-        "p2-title": "Industrial Structure Design",
-        "p3-title": "Urban Planning Project",
+        "p1-title": "",
+        "p2-title": "",
+        "p3-title": "",
         "view-text-1": "View Details",
         "view-text-2": "View Details",
         "view-text-3": "View Details",
@@ -110,31 +110,42 @@ let currentLang = localStorage.getItem('selectedLang') || "tr";
 
 // --- 2. ÇEVİRİ VE DİL DEĞİŞTİRME FONKSİYONU ---
 function applyTranslations() {
-    const langBtn = document.getElementById('lang-toggle-btn');
-    if (langBtn) {
-        langBtn.querySelector('.current-lang').innerText = currentLang.toUpperCase();
+    // Masaüstü butonunu güncelle
+    const desktopBtn = document.getElementById('lang-toggle-btn');
+    if (desktopBtn && desktopBtn.querySelector('.current-lang')) {
+        desktopBtn.querySelector('.current-lang').innerText = currentLang.toUpperCase();
+    }
+    
+    // Mobil butonunu güncelle
+    const mobileBtn = document.getElementById('lang-toggle-btn-mobile');
+    if (mobileBtn && mobileBtn.querySelector('.current-lang')) {
+        mobileBtn.querySelector('.current-lang').innerText = currentLang.toUpperCase();
     }
     
     // HTML ana etiketinin lang değerini senkronize et
     document.documentElement.lang = currentLang;
 
     // ID bazlı metinleri güncelle
-    Object.keys(translations[currentLang]).forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.innerText = translations[currentLang][id];
-        }
-    });
+    if (translations[currentLang]) {
+        Object.keys(translations[currentLang]).forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.innerText = translations[currentLang][id];
+            }
+        });
+    }
 
     // Dropdown Butonu Güncelleme
     const dropBtn = document.querySelector('.dropbtn');
-    if (dropBtn) dropBtn.innerText = translations[currentLang]["nav-services-btn"];
+    if (dropBtn && translations[currentLang]["nav-services-btn"]) {
+        dropBtn.innerText = translations[currentLang]["nav-services-btn"];
+    }
 
-    // Navigasyon Linklerini Güncelleme (Farklı sayfalardaki tam yol linkleri içerecek şekilde kapsayıcı yapıldı)
+    // Navigasyon Linklerini Güncelleme
     const allLinks = document.querySelectorAll('nav a, .mobile-nav-panel a, .footer-nav a');
     allLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href) {
+        if (href && translations[currentLang]) {
             if (href.includes("#biz-kimiz")) link.innerText = translations[currentLang]["nav-who"];
             if (href.includes("#projeler")) link.innerText = translations[currentLang]["nav-projects"];
             if (href.includes("#iletisim")) link.innerText = translations[currentLang]["nav-contact"];
@@ -145,26 +156,41 @@ function applyTranslations() {
     });
 }
 
-// Dil Değiştirme Butonu Dinleyicisi
-const langBtn = document.getElementById('lang-toggle-btn');
-if (langBtn) {
-    langBtn.addEventListener('click', () => {
-        currentLang = (currentLang === "tr") ? "en" : "tr";
-        localStorage.setItem('selectedLang', currentLang); // Seçimi tarayıcı hafızasına kaydet
-        applyTranslations();
-    });
+// Ortak Dil Değiştirme Tetikleyicisi
+function toggleLanguage() {
+    currentLang = (currentLang === "tr") ? "en" : "tr";
+    localStorage.setItem('selectedLang', currentLang); // Seçimi tarayıcı hafızasına kaydet
+    applyTranslations();
 }
 
-// --- 3. MOBİL MENÜ ---
-const menuToggle = document.getElementById('menu-toggle');
-const mobileNav = document.getElementById('mobile-nav');
+// --- 3. EVENT LISTENERS & INITIALIZATION ---
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger Menü Yönetimi
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
-        menuToggle.classList.toggle('open');
-    });
-}
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+    }
+
+    // Masaüstü Dil Butonu Dinleyicisi
+    const desktopBtn = document.getElementById('lang-toggle-btn');
+    if (desktopBtn) {
+        desktopBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // Mobil Dil Butonu Dinleyicisi
+    const mobileBtn = document.getElementById('lang-toggle-btn-mobile');
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // Sayfa ilk yüklendiğinde hafızadaki dili uygula
+    applyTranslations();
+});
 
 // --- 4. MODAL YÖNETİMİ & PROJE VERİLERİ ---
 const projectModal = document.getElementById('projectModal');
@@ -214,7 +240,6 @@ function openProject(id) {
     const p = projectsData[id];
     if(!p) return;
 
-    // Elemanları Seç
     const modalImg = document.getElementById('modal-img');
     const modalTitle = document.getElementById('modal-title');
     const modalLoc = document.getElementById('modal-loc');
@@ -222,7 +247,6 @@ function openProject(id) {
     const modalYear = document.getElementById('modal-year');
     const modalDesc = document.getElementById('modal-desc');
 
-    // Verileri Bas
     if (modalImg) modalImg.src = p.img;
     if (modalTitle) modalTitle.innerText = p[currentLang];
     if (modalLoc) modalLoc.innerText = p.loc[currentLang];
@@ -230,7 +254,6 @@ function openProject(id) {
     if (modalYear) modalYear.innerText = p.year;
     if (modalDesc) modalDesc.innerText = p.desc[currentLang];
 
-    // Modalı Göster
     if (projectModal) projectModal.style.display = 'block';
 }
 
@@ -251,8 +274,3 @@ window.onscroll = () => {
         else header.classList.remove('scrolled');
     }
 };
-
-// --- 6. SAYFA İLK YÜKLENDİĞİNDE HAFIZADAKİ DİLİ UYGULA ---
-document.addEventListener("DOMContentLoaded", () => {
-    applyTranslations();
-});

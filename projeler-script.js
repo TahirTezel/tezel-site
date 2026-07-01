@@ -4,7 +4,7 @@
  * =========================================================================
  */
 
-// 1. DİL TERCÜME SÖZLÜĞÜ (Eksik olan dil paketleri eklendi)
+// 1. DİL TERCÜME SÖZLÜĞÜ
 const translations = {
     TR: {
         nav_who: "Biz Kimiz",
@@ -14,7 +14,7 @@ const translations = {
         title_ongoing: "DEVAM EDEN PROJELERİMİZ",
         title_completed: "TAMAMLANAN PROJELERİMİZ",
         examine_btn: "DETAYLARI GÖR",
-        status_ongoing: "DEVAM EDiyor",
+        status_ongoing: "DEVAM EDİYOR",
         status_completed: "TAMAMLANDI",
         footer_fast: "Hızlı Menü",
         footer_contact: "İletişim Bilgileri",
@@ -51,7 +51,7 @@ const projectDescriptions = {
             t: "Tezel Kaplan Evleri 2. Etap",
             status: "Devam Ediyor",
             location: "Van / Hatuniye",
-            d: "Van’ın prestijli lokasyonunda konumlanan Kaplanlar 2. Etap, 32 daireden oluşan butik ve nitelikli bir yapı sunuyor. Depreme tam dayanıklı ileri mühendislik altyapısı ve modern mimari detaylarla inşa edilen projemiz; geniş iç mekanları ve yüksek malzeme kalitesiyle öne çıkıyor. Tezel güvencesiyle hayata geçirilen bu proje, konforu ve estetiği bir araya getiren özel bir yaşam alanı tanımlıyor." 
+            d: "Van’ın prestijli lokasyonunda konumlanan Kaplanlar 2. Etap, 32 daireden oluşan butik ve nitelikli bir yapı sunuyor. Depreme tam dayanıklı ileri mühendislik altyapısı ve modern mimari detaylarla inşa edilen projemiz; geniş iç mekanları og yüksek malzeme kalitesiyle öne çıkıyor. Tezel güvencesiyle hayata geçirilen bu proje, konforu ve estetiği bir araya getiren özel bir yaşam alanı tanımlıyor." 
         }, 
         en: { 
             t: "Tezel Kaplan Houses Phase 2",
@@ -76,13 +76,13 @@ const projectDescriptions = {
     },
     'tezel-merkez-projesi': {
         tr: {
-            t: "Tezel Merkez Projesi",
+            t: "Tezel-Nurfa Terzioğlu Projesi",
             status: "Devam Ediyor",
             location: "Van / İpekyolu",
-            d: "Van’ın gözde lokasyonlarından Terzioğlu’nda hayata geçirdiğimiz yeni projemiz; modern mimari ile konforlu yaşamı bir araya getiriyor. Estetik dış cephe tasarımı, yüksek malzeme kalitesi ve işlevsel iç mekan çözümleriyle inşa edilen bu yapıda, her detay sakinlerimizin yaşam standardını yükseltmek için planlandı. Tezel güvencesiyle sağlam mühendislik ve kusursuz işçiliği buluşturan bu proje, Terzioğlu'nun merkezinde prestijli bir yaşam deneyimi sunuyor."
+            d: "Van’ın gözde lokasyonlarından Terzioğlu’nda hayata geçirdiğimiz yeni projemiz; modern mimari ile konforlu yaşamı bir araya getiriyor. Estetik dış cephe tasarımı, yüksek malzeme kalitesi og işlevsel iç mekan çözümleriyle inşa edilen bu yapıda, her detay sakinlerimizin yaşam standardını yükseltmek için planlandı. Tezel güvencesiyle sağlam mühendislik ve kusursuz işçiliği buluşturan bu proje, Terzioğlu'nun merkezinde prestijli bir yaşam deneyimi sunuyor."
         },
         en: {
-            t: "TeCenter Project",
+            t: "Tezel-Nurfa Terzioğlu Project",
             status: "Ongoing",
             location: "Van / Ipekyolu",
             d: "Our new project, located in the popular Terzioğlu area of Van, combines modern architecture with comfortable living. Built with aesthetic exterior design, high-quality materials, and functional interior solutions, every detail in this structure is planned to enhance the living standards of its residents. With Tezel's assurance, this project brings together solid engineering and flawless craftsmanship, offering a prestigious living experience in the heart of Terzioğlu."
@@ -107,13 +107,13 @@ const projectDescriptions = {
             t: "Yaşamkent Evleri", 
             status: "Tamamlandı",
             location: "Van / Merkez",
-            d: "Terzioğlu’nun merkezinde yükselen Yaşam Kent Evleri, 2+1 ve 3+1 daire seçenekleriyle konforu yeniden tanımlıyor. Ultra lüks iç mekan tasarımı ve geniş yeşil alanlarıyla ön plana çıkan projemiz; şehir hayatının merkezinde doğayla iç içe bir yaşam sunuyor. Tezel güvencesiyle; sağlam mühendislik, estetik peyzaj ve kusursuz işçiliği bir araya getiren yapımız, huzuru ve prestiji evinizin içine taşıyor." 
+            d: "Yaşam Kent Evleri, şehrin en değerli akslarından biri olan Terzioğlu Caddesi üzerinde konumlanan, modern şehir yaşamını konforla buluşturan özel bir konut projesidir. 2+1 ve 3+1 daire seçenekleriyle farklı yaşam ihtiyaçlarına hitap eden proje, ferah peyzaj alanları, titizlikle tercih edilen yapı malzemeleri ve merkezi konumuyla öne çıkmaktadır. Günlük yaşamın tüm olanaklarına kolay erişim sunarken, sakinlerine huzurlu ve nitelikli bir yaşam deneyimi vadeder." 
         }, 
         en: { 
             t: "Yasamkent Houses", 
             status: "Completed",
             location: "Van / Central",
-            d: "Rising in the center of Terzioğlu, Yasamkent Houses redefines comfort with 2+1 and 3+1 apartment options. Our project, which stands out with its ultra-luxurious interior design and spacious green areas, offers a life intertwined with nature in the heart of city life. With Tezel's assurance, our structure combines solid engineering, aesthetic landscaping, and flawless craftsmanship, bringing peace and prestige into your home." 
+            d: "Yasamkent Houses is a special residential project located on Terzioğlu Street, one of the most valuable axes of the city, combining modern urban living with comfort. Catering to different lifestyle needs with 2+1 and 3+1 apartment options, the project stands out with its spacious landscaped areas, carefully selected building materials, and central location. It offers easy access to all daily life amenities while promising residents a peaceful and high-quality living experience." 
         } 
     },
     'tezel-sihke-evleri': { 
@@ -121,24 +121,24 @@ const projectDescriptions = {
             t: "Tezel Sıhke Evleri", 
             status: "Tamamlandı",
             location: "Van / İpekyolu",
-            d: "Sıhke lokasyonunda hayata geçirdiğimiz projemiz; alt katındaki ticari alanların sağladığı pratiklik ile konutların sunduğu lüksü bir araya getiriyor. 1+1 dairelerin modern ve kullanışlı yapısının yanı sıra, en üst katta yer alan 2+1 dubleks seçenekleri, ferahlık arayanlar için özel olarak tasarlandı. Tezel güvencesiyle; kusursuz işçilik ve kaliteli malzeme standartlarını buluşturan bu yapımız, Sıhke’nin kalbinde hem konforlu bir yaşam alanı hem de ihtiyaç duyulan her şeye kolay erişim imkanı sunuyor." 
+            d: "Van'ın önemli ulaşım güzergâhlarından biri olan Sıhke Caddesi üzerinde, Boyalar Camii'nin karşısında ve Conforium Otel'in hemen yanında konumlanan Tezel Sıhke Evleri; toplam 44 adet 1+1 ve 2+1 daire ile zemin katta yer alan 5 cadde mağazasını bir araya getiren özel bir yaşam projesidir. Şehir merkezine yakın konumuyla günlük yaşamı kolaylaştıran proje, fonksiyonel daire planları, kaliteli yapı standartları ve cadde yaşamına entegre mimarisiyle hem yaşam hem de yatırım açısından güçlü bir alternatif sunmaktadır." 
         }, 
         en: { 
             t: "Tezel Sihke Houses", 
             status: "Completed",
             location: "Van / Ipekyolu",
-            d: "Sıhke lokasyonunda hayata geçirdiğimiz projemiz; alt katındaki ticari alanların sağladığı pratiklik ile konutların sunduğu lüksü bir araya getiriyor. 1+1 dairelerin modern ve kullanışlı yapısının yanı sıra, en üst katta yer alan 2+1 dubleks seçenekleri, ferahlık arayanlar için özel olarak tasarlandı. Tezel güvencesiyle; kusursuz işçilik ve kaliteli malzeme standartlarını buluşturan bu yapımız, Sıhke’nin kalbinde hem konforlu bir yaşam alanı hem de ihtiyaç duyulan her şeye kolay erişim imkanı sunuyor." 
+            d: "Situated on Sıhke Avenue—one of Van’s key transportation routes—directly across from Boyalar Mosque and right next to the Conforium Hotel, Tezel Sıhke Evleri is a distinctive residential project comprising a total of 44 apartments (in 1+1 and 2+1 layouts) and five street-level retail units. Offering a location close to the city center that simplifies daily life, the project presents a compelling option for both living and investment, thanks to its functional apartment layouts, high construction standards, and architecture that integrates seamlessly with the streetscape." 
         }
     },
-    'the-merucure-otel': {
+    'the-mercure-otel': {
         tr: {
-            t: "The Merucure Otel",
+            t: "The Mercure Otel",
             status: "Tamamlandı",
             location: "Van / Edremit",
             d: "İstanbul’un yoğun ve prestijli turizm ağında yer alan Mercure Otel projesinde, mekanın kalitesini belirleyen ince işçilik süreçlerini Tezel güvencesiyle hayata geçirdik. İç mekanın estetik dokusunu oluşturan her bir detayda; yüksek malzeme standardı ve profesyonel uygulama disiplinimizi birleştirdik. Tasarımın ruhunu yansıtan ve uzun ömürlü kullanım sunan detaylara odaklanarak, otelin konforlu atmosferine estetik bir imza attık."
         },
         en: {
-            t: "The Merucure Hotel",
+            t: "The Mercure Hotel",
             status: "Completed",
             location: "Van / Edremit",
             d: "In the Mercure Hotel project, located in Istanbul's dense and prestigious tourism network, we implemented the fine craftsmanship processes that define the quality of the space with Tezel's assurance. In every detail that forms the aesthetic texture of the interior, we combined high material standards with professional application discipline. By focusing on details that reflect the spirit of design and offer long-lasting use, we added an aesthetic signature to the hotel's comfortable atmosphere."
@@ -163,13 +163,13 @@ const projectDescriptions = {
             t: "Tezel Family Residences",
             status: "Tamamlandı",
             location: "Van / İpekyolu",
-            d: "Şehrin en değerli ve merkezi lokasyonlarından birinde yükselen Tezel Family Residence, 1+1 daire konseptini lüks ve konforla yeniden buluşturuyor. 32 özel daireden oluşan projemiz, akılcı mimarisi ve üst düzey yaşam standartlarıyla dikkat çekiyor. Tezel güvencesiyle hayata geçirilen bu yapıda; yüksek malzeme kalitesi, kusursuz işçilik ve modern tasarım detayları bir arada sunuluyor. Şehrin merkezinde, ulaşım ve yaşam olanaklarına yakın, prestijli ve konforlu bir yaşam alanı arayanlar için özel olarak tasarlandı."
+            d: "Van şehir merkezinde, VATSO binasının arkasında ve Atatürk Lisesi'ne yürüme mesafesinde konumlanan Tezel Family Apartmanı, toplam 32 adet 1+1 daireden oluşan modern bir konut projesidir. Merkezi konumu sayesinde eğitim kurumları, alışveriş noktaları ve günlük yaşamın ihtiyaç duyulan tüm hizmetlerine kolay erişim imkânı sunan proje, kompakt ve fonksiyonel yaşam alanlarıyla şehir hayatının dinamizmini konforla buluşturmaktadır. Kaliteli yapı anlayışı ve özenli işçiliğiyle hem bireysel yaşam hem de yatırım amacıyla tercih edilebilecek nitelikli bir yaşam alanı sunmaktadır."
         },
         en: {
             t: "Tezel Family Residences",
             status: "Completed",
             location: "Van / Ipekyolu",
-            d: "Rising in one of the most valuable and central locations of the city, Tezel Family Residence brings together the 1+1 apartment concept with luxury and comfort. Our project, consisting of 32 exclusive apartments, stands out with its intelligent architecture and high living standards. Brought to life with Tezel's assurance, this structure offers high material quality, flawless craftsmanship, and modern design details together. It is specially designed for those seeking a prestigious and comfortable living space in the city center, close to transportation and lifestyle amenities."
+            d: "Located in the city center of Van, behind the VATSO building and within walking distance to Atatürk High School, Tezel Family Apartments is a modern residential project consisting of a total of 32 one-bedroom apartments. Thanks to its central location, the project offers easy access to educational institutions, shopping points, and all essential services for daily life. With compact and functional living spaces, it combines the dynamism of city life with comfort. With its quality construction approach and meticulous craftsmanship, it provides a qualified living space that can be preferred for both individual living and investment purposes."
         }
     },
     'ikinisan-apartmani': {
@@ -177,13 +177,13 @@ const projectDescriptions = {
             t: "İki Nisan Apartmanı",
             status: "Tamamlandı",
             location: "Van / İpekyolu",
-            d: "Deprem yönetmeliğine tam uyumlu, radye temel sistemiyle inşa edilmiş, modern cephe tasarımıyla bir güven abidesi."
+            d: "Van AVM'ye yakın konumda, caddeye sıfır olarak inşa edilen İkinisan Apartmanı, toplam 24 adet 3+1 daireden oluşan seçkin bir konut projesidir. Geniş ve kullanışlı daire planlarıyla aile yaşamına uygun bir anlayışla tasarlanan proje, ana ulaşım güzergâhlarına ve günlük ihtiyaç noktalarına kolay erişim avantajı sunmaktadır. Konfor, kalite ve işlevselliği bir araya getiren İkinisan Apartmanı, merkezi konumu ve özenli yapı anlayışıyla sakinlerine ayrıcalıklı bir yaşam deneyimi sunmaktadır."
         },
         en: {
             t: "Iki Nisan Apartment",
             status: "Completed",
             location: "Van / Ipekyolu",
-            d: "Fully compliant with earthquake regulations, built with a raft foundation system."
+            d: "Located close to Van AVM and built right on the street, Iki Nisan Apartment is an exclusive residential project consisting of a total of 24 three-bedroom apartments. Designed with spacious and functional apartment layouts suitable for family living, the project offers easy access to main transportation routes and daily necessities. Combining comfort, quality, and functionality, Iki Nisan Apartment provides its residents with a privileged living experience through its central location and meticulous construction approach."
         }
     },
     'masal-evi-kresi': { 
@@ -191,13 +191,13 @@ const projectDescriptions = {
             t: "Masal Evi Kreşi", 
             status: "Tamamlandı",
             location: "Van / Edremit",
-            d: "Geleceğimizin teminatı olan çocuklarımız için en güvenli ve en estetik ortamı oluşturma vizyonuyla Masal Evi Kreşi projesini hayata geçirdik." 
+            d: "Van Kale Yolu üzerinde yer alan Masal Evi Kreşi, mevcut yapının eğitim yapısı standartlarına uygun şekilde yeniden dönüştürüldüğü kapsamlı bir uygulama projesidir. Kullanım amacına uygun olmayan mevcut yapı; iç mekân düzenlemeleri, duvar revizyonları, altyapı çalışmaları ve dış cephe uygulamalarıyla tamamen yenilenerek modern bir kreş kimliği kazanmıştır. Projenin tüm ince yapı işçiliği ve uygulama süreçleri firmamız tarafından titizlikle yürütülmüş, güvenli, fonksiyonel ve estetik bir eğitim ortamı oluşturulmuştur." 
         }, 
         en: { 
             t: "Masal House Kindergarten", 
             status: "Completed",
             location: "Van / Edremit",
-            d: "Our project, aimed at creating the safest and most aesthetic environment for our children." 
+            d: "Masal Evi Kindergarten, located on Van Kale Road, is a comprehensive application project where the existing structure has been transformed to meet educational building standards. The existing structure, which was not suitable for its intended use, has been completely renewed through interior space arrangements, wall revisions, infrastructure works, and exterior applications, resulting in a modern kindergarten identity. All fine construction craftsmanship and application processes of the project were meticulously carried out by our company, creating a safe, functional, and aesthetic educational environment." 
         } 
     },
     'kahraman-villa': { 
@@ -211,7 +211,7 @@ const projectDescriptions = {
             t: "Kahraman Villa", 
             status: "Completed",
             location: "Van / Edremit",
-            d: "Kahraman Villa project is a structure that stands out with its modern architectural approach and magnifique view of Lake Van." 
+            d: "Kahraman Villa project is a structure that stands out with its modern architectural approach and magnifique view of Lake Van, equipped with smart home systems." 
         } 
     }
 };
@@ -333,7 +333,6 @@ function repopulateModalData(card) {
     if (mYear) mYear.innerText = card.getAttribute('data-year') || "2026";
 }
 
-// --- EKSİK OLAN SLAYT GÜNCELLEME FONKSİYONU EKLENDİ ---
 function updateSliderImage() {
     const sliderContainer = document.getElementById('slider-container');
     if (!sliderContainer) return;
@@ -356,17 +355,15 @@ function updateSliderImage() {
     });
 }
 
-// --- EKSİK OLAN MODAL KAPATMA FONKSİYONU EKLENDİ ---
 window.closeModal = function() {
     const modal = document.getElementById('projectModal');
     if (modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = "auto"; // Kaydırmayı geri aç
+        document.body.style.overflow = "auto";
     }
     activeCardElement = null;
 };
 
-// --- SLAYT OKLARININ FONKSİYONLARI EKLENDİ ---
 function changeSlide(direction) {
     if (currentImages.length <= 1) return;
     
@@ -399,7 +396,7 @@ window.openModal = function(element) {
     }
 
     repopulateModalData(card);
-    updateSliderImage(); // Artık bu fonksiyon tanımlı olduğu için hata vermeyecek!
+    updateSliderImage();
     
     const modal = document.getElementById('projectModal');
     if (modal) {
@@ -408,7 +405,6 @@ window.openModal = function(element) {
     }
 };
 
-// Ok butonları için event listener'lar dinamik bağlama
 document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.slider-nav.next');
     if(nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); changeSlide(1); });
@@ -430,7 +426,6 @@ if(menuBtn) {
     });
 }
 
-// Dış boşluğa tıklayınca kapatma
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('projectModal');
     if (event.target === modal) {
@@ -438,18 +433,18 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// ESC tuşuyla kapatma
 window.addEventListener("keydown", function(e) {
     if (e.key === "Escape") {
         window.closeModal();
-        if(document.getElementById('lightbox-system')) {
-            document.getElementById('lightbox-system').classList.remove('active');
+        const lightboxSys = document.getElementById('lightbox-system');
+        if(lightboxSys) {
+            lightboxSys.classList.remove('active');
         }
     }
 });
 
 // =========================================================================
-// TEZEL İNŞAAT - LIGHTBOX (TAM EKRAN) SİSTEMİ LOGİC KODLARI
+// LIGHTBOX (TAM EKRAN) SİSTEMİ LOGIC KODLARI (GLOBAL SCOPE ENTEGRASYONU)
 // =========================================================================
 document.addEventListener('DOMContentLoaded', () => {
     const sliderCont = document.getElementById('slider-container');
@@ -468,23 +463,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function closeLightbox(e) {
+// HTML inline click tetikleyicileri için global kapsama açıldı
+window.closeLightbox = function(e) {
     const lightboxSys = document.getElementById('lightbox-system');
     if(!lightboxSys) return;
     if (!e.target.closest('#lightbox-img') && !e.target.closest('.lightbox-nav') || e.target.classList.contains('lightbox-close')) {
         lightboxSys.classList.remove('active');
     }
-}
+};
 
-function changeLightboxImg(direction, e) {
+window.changeLightboxImg = function(direction, e) {
     e.stopPropagation(); 
     changeSlide(direction);
     
-    setTimeout(() => {
-        const activeImg = document.querySelector('#slider-container img.active');
-        const lightboxImg = document.getElementById('lightbox-img');
-        if(activeImg && lightboxImg) {
-            lightboxImg.src = activeImg.src;
-        }
-    }, 50);
-}
+    // Doğrudan güncel dizi indeksinden çekilerek sıfır gecikmeyle senkronize edildi
+    const lightboxImg = document.getElementById('lightbox-img');
+    if(lightboxImg && currentImages[currentIndex]) {
+        lightboxImg.src = currentImages[currentIndex];
+    }
+};

@@ -26,7 +26,7 @@ const translations = {
         s3_title: "3D Modelleme & Render",
         s3_desc: "Projenizi henüz inşa edilmeden önce fotogerçekçi teknolojilerle dijital ortamda deneyimleme şansı.",
         s4_title: "Uygulama & Kontrolörlük",
-        s4_desc: "Çizilen her detayın sahada kusursuzca hayata geçirilmesi için titiz şantiye takibi ve danışmanlık.",
+        s4_desc: "Çizilen her detayın sahada kusursuzca hayata geçirilmesi için titiz şantiye takibi og danışmanlık.",
         
         // Alt Alanlar
         footer_fast: "Hızlı Menü",
@@ -66,7 +66,7 @@ const translations = {
     }
 };
 
-// 2. PROJE DETAYLARI VERİTABANI (M1 - M8)
+// 2. PROJE DETAYLARI VERİTABANI (M1 - M9)
 const projectDescriptions = {
     'm1': { 
         tr: { 
@@ -81,7 +81,7 @@ const projectDescriptions = {
     'm2': { 
         tr: { 
             t: "Tezel Kaplan Evleri", 
-            d: "Toplam 72 bağımsız bölümden oluşan ultra lüks 2+1 projemiz, Van’ın en geniş yeşil yaşam alanlarından birine sahip seçkin yapısıyla modern yaşam standardslarını üst seviyeye taşımaktadır. Kapalı otopark imkânı, ferah mimari tasarımı ve yüksek kalite malzeme tercihleriyle şekillenen proje; doğayla iç içe, konforlu og prestijli bir yaşam deneyimi sunmak üzere özenle hayata geçirilmiştir" 
+            d: "Toplam 72 bağımsız bölümden oluşan ultra lüks 2+1 projemiz, Van’ın en geniş yeşil yaşam alanlarından birine sahip seçkin yapısıyla modern yaşam standardslarını üst seviyeye taşımaktadır. Kapalı otopark imkânı, ferah mimari tasarımı ve yüksek kalite malzeme tercihleriyle şekillenen proje; doğayla iç içe, konforlu ve prestijli bir yaşam deneyimi sunmak üzere özenle hayata geçirilmiştir" 
         },
         en: { 
             t: "Tezel Kaplan Houses", 
@@ -101,7 +101,7 @@ const projectDescriptions = {
     'm4': { 
         tr: { 
             t: "Atacan İnşaat", 
-            d: "Yaşam kalitesini ve estetiği odağına alan 2+1 ve 3+1 konut alternatiflerimiz, modern şehir mimarisinin en fonksiyonel çözümlerini sunmaktadır. Çekirdek ailelerden geniş ailelere kadar her profile hitap eden daire tiplerimiz; optimum metrekare dağılumı, bağımsız ve ortak yaşam alanlarının dengeli kurgusu ve yüksek konfor standartları ile ayrıcalıklı bir yaşam deneyimi vadetmektedir." 
+            d: "Yaşam kalitesini ve estetiği odağına alan 2+1 ve 3+1 konut alternatiflerimiz, modern şehir mimarisinin en fonksiyonel çözümlerini sunmaktadır. Çekirdek ailelerden geniş ailelere kadar her profile hitap eden daire tiplerimiz; optimum metrekare dağılımı, bağımsız ve ortak yaşam alanlarının dengeli kurgusu ve yüksek konfor standartları ile ayrıcalıklı bir yaşam deneyimi vadetmektedir." 
         }, 
         en: { 
             t: "Atacan Construction",
@@ -131,7 +131,7 @@ const projectDescriptions = {
     'm7': { 
         tr: { 
             t: "Tezel Sıhke Evleri", 
-            d: "Sıhke’de konumlanan bu özel projemiz, modern 1+1 daire konsepti ile zemin katta yer alan ticari alanları bir araya getirerek yaşam ve yatırım değerini aynı yapıda buluşturmaktadır. Estetik mimari çizgiler, işlevsel iç mekân planlaması ve yüksek kalite uygulama detaylarıyla şekillenen proje; konfor, prestij ve kullanım verimliliğini ön planda tutan çağdaş bir yaşam anlayışı sunmaktadır." 
+            d: "Sıhke’de konumlanan bu özel projemiz, modern 1+1 daire konsepti ile zemin katta yer alan ticari alanları bir araya getirerek yaşam ve yatırım değerini aynı yapıda buluşturmaktadır. Estetik mimari çizgiler, işlevsel iç mekân planlaması og yüksek kalite uygulama detaylarıyla şekillenen proje; konfor, prestij ve kullanım verimliliğini ön planda tutan çağdaş bir yaşam anlayışı sunmaktadır." 
         }, 
         en: { 
             t: "Tezel Sihke Houses", 
@@ -170,9 +170,16 @@ function updatePageLanguage() {
     const t = translations[currentLang];
     document.documentElement.lang = currentLang.toLowerCase();
 
+    // Masaüstü dil seçici yazısını güncelle
     const currentLangSpan = document.querySelector('#lang-toggle-btn .current-lang');
     if (currentLangSpan) {
         currentLangSpan.innerText = currentLang;
+    }
+
+    // Mobil dil seçici yazısını güncelle (Yeni Eklendi)
+    const mobileLangSpan = document.querySelector('#lang-toggle-btn-mobile .current-lang');
+    if (mobileLangSpan) {
+        mobileLangSpan.innerText = currentLang;
     }
 
     document.querySelectorAll('a[href="index.html#biz-kimiz"]').forEach(el => el.innerText = t.nav_who);
@@ -230,16 +237,38 @@ function updatePageLanguage() {
     }
 }
 
+// Ortak Dil Değiştirme Tetikleyicisi
+function toggleLanguage() {
+    currentLang = (currentLang === "TR") ? "EN" : "TR";
+    localStorage.setItem('selectedLang', currentLang);
+    updatePageLanguage();
+}
+
 // 4. SAYFA YÜKLENDİĞİNDE ÇALIŞACAK AYARLAR
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // Sayfa dili ilk açılışta senkronize edilir
     updatePageLanguage();
 
+    // Masaüstü Dil Butonu Dinleyicisi
     const langBtn = document.getElementById('lang-toggle-btn');
     if(langBtn) {
-        langBtn.addEventListener('click', () => {
-            currentLang = (currentLang === "TR") ? "EN" : "TR";
-            localStorage.setItem('selectedLang', currentLang);
-            updatePageLanguage();
+        langBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // Mobil Dil Butonu Dinleyicisi (Yeni Eklendi)
+    const mobileLangBtn = document.getElementById('lang-toggle-btn-mobile');
+    if(mobileLangBtn) {
+        mobileLangBtn.addEventListener('click', toggleLanguage);
+    }
+
+    // --- MOBİL MENÜ ETKİLEŞİMİ (Güvenli Alan İçine Alındı) ---
+    const menuBtn = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    if(menuBtn && mobileNav) {
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            mobileNav.classList.toggle('active');
         });
     }
 
@@ -379,16 +408,6 @@ window.closeModal = function() {
     }
     activeProjectId = null;
 };
-
-// 7. MOBİL MENÜ ETKİLEŞİMİ
-const menuBtn = document.getElementById('menu-toggle');
-if(menuBtn) {
-    menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('open');
-        const mobileNav = document.getElementById('mobile-nav');
-        if (mobileNav) mobileNav.classList.toggle('active');
-    });
-}
 
 window.onclick = function(event) {
     const modal = document.getElementById('projectModal');
