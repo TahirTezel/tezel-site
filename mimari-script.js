@@ -70,21 +70,21 @@ const translations = {
 const projectDescriptions = {
     'm1': { 
         tr: { 
-            t: "2+1 Devam Projesi",
+            t: "Tezel Kaplan 2. Etap",
             d: "Hatuniye Mahallesi’nde yapımı devam eden 2+1 ikinci etap projemiz, 110 metrekarelik geniş yaşam alanları ve toplam 32 daireden oluşan seçkin yapısıyla modern yaşam standartlarını yeniden tanımlamaktadır. Kapalı otopark imkânı, ferah iç mekân planlaması ve ultra lüks malzeme tercihleriyle tasarlanan proje; estetik mimari anlayışı, yüksek kalite işçiliği ve yaşam konforunu ön planda tutan detaylarıyla öne çıkmaktadır. Her ayrıntısı titizlikle planlanan bu özel proje, ayrıcalıklı ve prestijli bir yaşam alanı sunmak üzere yükselmeye devam etmektedir" 
         }, 
         en: { 
-            t: "2+1 Ongoing Project",
+            t: "Tezel Kaplan 2nd Phase",
             d: "This is a unique project under construction in Hatuniye Neighborhood, featuring spacious 2+1 layouts and a premium structure with a total of 32 units. The project, designed with a closed parking facility, spacious interior planning, and ultra-luxury materials, stands out for its aesthetic architectural approach, high-quality craftsmanship, and focus on living comfort. Every detail of this exclusive project is meticulously planned to provide a distinctive and prestigious living environment." 
         } 
     },
     'm2': { 
         tr: { 
-            t: "Tezel Kaplan Evleri", 
+            t: "Tezel Kaplan Evleri 1. Etap", 
             d: "Toplam 72 bağımsız bölümden oluşan ultra lüks 2+1 projemiz, Van’ın en geniş yeşil yaşam alanlarından birine sahip seçkin yapısıyla modern yaşam standardslarını üst seviyeye taşımaktadır. Kapalı otopark imkânı, ferah mimari tasarımı ve yüksek kalite malzeme tercihleriyle şekillenen proje; doğayla iç içe, konforlu ve prestijli bir yaşam deneyimi sunmak üzere özenle hayata geçirilmiştir" 
         },
         en: { 
-            t: "Tezel Kaplan Houses", 
+            t: "Tezel Kaplan Houses 1st Phase", 
             d: "Our ultra-luxury 2+1 project, consisting of a total of 72 independent units, is located in one of Van’s largest green living areas. With its exclusive structure, it elevates modern living standards to a new level. The project, characterized by a spacious architectural design and high-quality material choices, offers a unique living experience that seamlessly integrates with nature, providing comfort and prestige." 
         } 
     },

@@ -11,6 +11,9 @@ const translations = {
         nav_projects: "Projelerimiz",
         nav_contact: "İletişim",
         nav_fields: "Faaliyet Alanları",
+        nav_arch: "Mimari",
+        nav_real: "Gayrimenkul",
+        nav_eng: "Mühendislik",
         title_ongoing: "DEVAM EDEN PROJELERİMİZ",
         title_completed: "TAMAMLANAN PROJELERİMİZ",
         examine_btn: "DETAYLARI GÖR",
@@ -29,6 +32,9 @@ const translations = {
         nav_projects: "Our Projects",
         nav_contact: "Contact",
         nav_fields: "Fields of Activity",
+        nav_arch: "Architecture",
+        nav_real: "Real Estate",
+        nav_eng: "Engineering",
         title_ongoing: "ONGOING PROJECTS",
         title_completed: "COMPLETED PROJECTS",
         examine_btn: "VIEW DETAILS",
@@ -74,21 +80,21 @@ const projectDescriptions = {
             d: "Our project, rising in the most central location of Edremit, brings an ultra-luxurious and spacious dimension to the 1+1 apartment concept. Designed with comfort in mind, every square meter features large glass facades, high ceilings, and functional interiors. With Tezel's assurance, this special structure combines first-class material quality, flawless craftsmanship, and advanced engineering infrastructure, offering a distinguished living space in Edremit."
         }
     },
-    'tezel-merkez-projesi': {
+    'Tezel Terzioğlu projesi': {
         tr: {
-            t: "Tezel-Nurfa Terzioğlu Projesi",
+            t: "Tezel Terzioğlu Projesi",
             status: "Devam Ediyor",
             location: "Van / İpekyolu",
             d: "Van’ın gözde lokasyonlarından Terzioğlu’nda hayata geçirdiğimiz yeni projemiz; modern mimari ile konforlu yaşamı bir araya getiriyor. Estetik dış cephe tasarımı, yüksek malzeme kalitesi og işlevsel iç mekan çözümleriyle inşa edilen bu yapıda, her detay sakinlerimizin yaşam standardını yükseltmek için planlandı. Tezel güvencesiyle sağlam mühendislik ve kusursuz işçiliği buluşturan bu proje, Terzioğlu'nun merkezinde prestijli bir yaşam deneyimi sunuyor."
         },
         en: {
-            t: "Tezel-Nurfa Terzioğlu Project",
+            t: "Tezel Terzioğlu Project",
             status: "Ongoing",
             location: "Van / Ipekyolu",
             d: "Our new project, located in the popular Terzioğlu area of Van, combines modern architecture with comfortable living. Built with aesthetic exterior design, high-quality materials, and functional interior solutions, every detail in this structure is planned to enhance the living standards of its residents. With Tezel's assurance, this project brings together solid engineering and flawless craftsmanship, offering a prestigious living experience in the heart of Terzioğlu."
         }
     },
-    'tezel-kaplan-evleri-1-etap': { 
+    'Tezel-Kaplan-Evleri-1-Etap': { 
         tr: { 
             t: "Tezel Kaplan Evleri 1. Etap", 
             status: "Tamamlandı",
@@ -102,7 +108,7 @@ const projectDescriptions = {
             d: "Our Phase 1 project, which laid the foundations of the Kaplanlar residential series, brings a new breath to the living standards in the region with its large-scale structure of 72 apartments. Combining solid engineering infrastructure with modern architectural lines, our project stands out with its spacious social areas, high material quality, and flawless craftsmanship. Brought to life with Tezel's assurance, this structure offers a peaceful living space where aesthetics and functionality are presented together." 
         } 
     },
-    'yasamkent-evleri': { 
+    'Tezel-Yasamkent-Evleri': { 
         tr: { 
             t: "Yaşamkent Evleri", 
             status: "Tamamlandı",
@@ -116,7 +122,7 @@ const projectDescriptions = {
             d: "Yasamkent Houses is a special residential project located on Terzioğlu Street, one of the most valuable axes of the city, combining modern urban living with comfort. Catering to different lifestyle needs with 2+1 and 3+1 apartment options, the project stands out with its spacious landscaped areas, carefully selected building materials, and central location. It offers easy access to all daily life amenities while promising residents a peaceful and high-quality living experience." 
         } 
     },
-    'tezel-sihke-evleri': { 
+    'Tezel-Sihke-Evleri': { 
         tr: { 
             t: "Tezel Sıhke Evleri", 
             status: "Tamamlandı",
@@ -130,7 +136,7 @@ const projectDescriptions = {
             d: "Situated on Sıhke Avenue—one of Van’s key transportation routes—directly across from Boyalar Mosque and right next to the Conforium Hotel, Tezel Sıhke Evleri is a distinctive residential project comprising a total of 44 apartments (in 1+1 and 2+1 layouts) and five street-level retail units. Offering a location close to the city center that simplifies daily life, the project presents a compelling option for both living and investment, thanks to its functional apartment layouts, high construction standards, and architecture that integrates seamlessly with the streetscape." 
         }
     },
-    'the-mercure-otel': {
+    'The-Mercure-Hotel': {
         tr: {
             t: "The Mercure Otel",
             status: "Tamamlandı",
@@ -144,7 +150,7 @@ const projectDescriptions = {
             d: "In the Mercure Hotel project, located in Istanbul's dense and prestigious tourism network, we implemented the fine craftsmanship processes that define the quality of the space with Tezel's assurance. In every detail that forms the aesthetic texture of the interior, we combined high material standards with professional application discipline. By focusing on details that reflect the spirit of design and offer long-lasting use, we added an aesthetic signature to the hotel's comfortable atmosphere."
         }
     },
-    'the-craton-otel': {
+    'The-Craton-Hotel': {
         tr: {
             t: "The Craton Otel",
             status: "Tamamlandı",
@@ -158,7 +164,7 @@ const projectDescriptions = {
             d: "We personally carried out all the fine craftsmanship and application processes of The Craton Hotel, one of Istanbul's prestigious tourism stops, with Tezel's assurance from start to finish. We took full responsibility for the technical details, material selection, and aesthetic touches at every point of the hotel. With our professional application discipline, we showcased our mastery in every detail from the beginning of the project to the delivery phase, transforming the hotel's high-standard atmosphere into reality."
         }
     },
-    'tezel-family-residences': {
+    'Tezel-Family-Residences': {
         tr: {
             t: "Tezel Family Residences",
             status: "Tamamlandı",
@@ -172,12 +178,12 @@ const projectDescriptions = {
             d: "Located in the city center of Van, behind the VATSO building and within walking distance to Atatürk High School, Tezel Family Apartments is a modern residential project consisting of a total of 32 one-bedroom apartments. Thanks to its central location, the project offers easy access to educational institutions, shopping points, and all essential services for daily life. With compact and functional living spaces, it combines the dynamism of city life with comfort. With its quality construction approach and meticulous craftsmanship, it provides a qualified living space that can be preferred for both individual living and investment purposes."
         }
     },
-    'ikinisan-apartmani': {
+    'Tezel-Ikinisan-Apartmani': {
         tr: {
-            t: "İki Nisan Apartmanı",
+            t: "Tezel Iki Nisan Apartmanı",
             status: "Tamamlandı",
             location: "Van / İpekyolu",
-            d: "Van AVM'ye yakın konumda, caddeye sıfır olarak inşa edilen İkinisan Apartmanı, toplam 24 adet 3+1 daireden oluşan seçkin bir konut projesidir. Geniş ve kullanışlı daire planlarıyla aile yaşamına uygun bir anlayışla tasarlanan proje, ana ulaşım güzergâhlarına ve günlük ihtiyaç noktalarına kolay erişim avantajı sunmaktadır. Konfor, kalite ve işlevselliği bir araya getiren İkinisan Apartmanı, merkezi konumu ve özenli yapı anlayışıyla sakinlerine ayrıcalıklı bir yaşam deneyimi sunmaktadır."
+            d: "Van AVM'ye yakın konumda, caddeye sıfır olarak inşa edilen Tezel Iki Nisan Apartmanı, toplam 24 adet 3+1 daireden oluşan seçkin bir konut projesidir. Geniş ve kullanışlı daire planlanıyla aile yaşamına uygun bir anlayışla tasarlanan proje, ana ulaşım güzergâhlarına ve günlük ihtiyaç noktalarına kolay erişim avantajı sunmaktadır. Konfor, kalite ve işlevselliği bir araya getiren Tezel Iki Nisan Apartmanı, merkezi konumu ve özenli yapı anlayışıyla sakinlerine ayrıcalıklı bir yaşam deneyimi sunmaktadır."
         },
         en: {
             t: "Iki Nisan Apartment",
@@ -186,7 +192,7 @@ const projectDescriptions = {
             d: "Located close to Van AVM and built right on the street, Iki Nisan Apartment is an exclusive residential project consisting of a total of 24 three-bedroom apartments. Designed with spacious and functional apartment layouts suitable for family living, the project offers easy access to main transportation routes and daily necessities. Combining comfort, quality, and functionality, Iki Nisan Apartment provides its residents with a privileged living experience through its central location and meticulous construction approach."
         }
     },
-    'masal-evi-kresi': { 
+    'Masal-Evi-Kresi': { 
         tr: { 
             t: "Masal Evi Kreşi", 
             status: "Tamamlandı",
@@ -238,6 +244,10 @@ function updatePageLanguage() {
     document.querySelectorAll('a[href="projeler.html"]').forEach(el => el.innerText = t.nav_projects);
     document.querySelectorAll('a[href="index.html#iletisim"], a[href="#iletisim"]').forEach(el => el.innerText = t.nav_contact);
     if(document.querySelector('.dropbtn')) document.querySelector('.dropbtn').innerText = t.nav_fields;
+
+    document.querySelectorAll('a[href="mimari.html"]').forEach(el => el.innerText = t.nav_arch);
+    document.querySelectorAll('a[href="gayrimenkul.html"]').forEach(el => el.innerText = t.nav_real);
+    document.querySelectorAll('a[href="muhendislik.html"]').forEach(el => el.innerText = t.nav_eng);
 
     // Başlıklar
     const ongoingTitle = document.getElementById('title-ongoing');

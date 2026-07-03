@@ -51,7 +51,7 @@ const translations = {
         "footer-nav-title": "Hızlı Menü",
         "footer-contact-title": "İletişim",
         "footer-social-title": "Bizi Takip Edin",
-        "f-addr": "Merkez Mah. No:1, İstanbul",
+        "f-addr": "Hafiziye, Sıhke Cd. Kapı No:143 Daire No:1, 65000 İpekyolu/Van",
         "f-copy": "TEZEL İNŞAAT. Tüm Hakları Saklıdır."
     },
     "en": {
@@ -100,7 +100,7 @@ const translations = {
         "footer-nav-title": "Quick Menu",
         "footer-contact-title": "Contact",
         "footer-social-title": "Follow Us",
-        "f-addr": "Merkez Ave. No:1, Istanbul",
+        "f-addr": "Hafiziye, Sıhke Cd. Kapı No:143 Daire No:1, 65000 İpekyolu/Van",
         "f-copy": "TEZEL CONSTRUCTION. All Rights Reserved."
     }
 };
@@ -135,11 +135,11 @@ function applyTranslations() {
         });
     }
 
-    // Dropdown Butonu Güncelleme
-    const dropBtn = document.querySelector('.dropbtn');
-    if (dropBtn && translations[currentLang]["nav-services-btn"]) {
-        dropBtn.innerText = translations[currentLang]["nav-services-btn"];
-    }
+   // Dropdown Butonu Güncelleme (Hata Vermeyen Güvenli Hali)
+const dropBtn = document.querySelector('.dropbtn');
+if (dropBtn && translations[currentLang] && translations[currentLang]["nav-services-btn"]) {
+    dropBtn.innerText = translations[currentLang]["nav-services-btn"];
+}
 
     // Navigasyon Linklerini Güncelleme
     const allLinks = document.querySelectorAll('nav a, .mobile-nav-panel a, .footer-nav a');
