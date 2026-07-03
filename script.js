@@ -19,7 +19,7 @@ const translations = {
         "stat-clients": "Mutlu Müşteri",
         
         // Projeler (Genel Başlıklar)
-        "projects-main-title": "Örnek Projelerimiz",
+        "projects-main-title": " Projelerimiz",
         "p1-title": "",
         "p2-title": "",
         "p3-title": "",
@@ -206,8 +206,8 @@ const projectsData = {
         status: { tr: 'Tamamlandı', en: 'Completed' },
         year: '2025/2026',
         desc: { 
-            tr: 'Bu proje, modern mimari anlayışıyla tasarlanmış olup toplam 3 bloktan oluşmaktadır. Projede tamamı 2+1 tipinde 72 daire yer almaktadır.2025 yılının Eylül ayında teslim edilen proje, planlı yerleşimi ve fonksiyonel daire yapısıyla konforlu bir yaşam sunmaktadır.Site içerisinde kapalı otopark, özenle düzenlenmiş peyzaj ve yeşil alanlar ile sakinlerine ferah ve kullanışlı bir yaşam alanı sağlanmıştır.Van’ın gelişen lokasyonlarından birinde yer alan proje, hem şehir hayatına yakınlığı hem de sunduğu düzenli ve sakin yaşam alanı ile öne çıkmaktadır.',
-            en: 'This project, designed with a modern architectural approach, consists of a total of 3 blocks. The project includes 72 apartments, all of which are 2+1 type. Completed in September 2025, the project offers a comfortable living experience with its planned layout and functional apartment design. Within the site, there is a closed parking lot, meticulously landscaped green areas, providing residents with a spacious and functional living environment. Additionally, a 24/7 camera system creates a secure site environment. Located in one of Van’s developing locations, the project stands out for its proximity to city life and the organized and peaceful living space it offers.'
+            tr: 'Kaplanlar konut serisinin temellerini atan 1. Etap projemiz, 72 dairelik geniş ölçekli yapısıyla bölgedeki yaşam standartlarına yeni bir soluk getiriyor. Sağlam mühendislik altyapısı ve modern mimari çizgilerin birleştiği projemiz; geniş sosyal alanları, yüksek malzeme kalitesi og kusursuz işçiliğiyle dikkat çekiyor. Tezel güvencesiyle hayata geçirilen bu yapıda, estetik ve fonksiyonellik bir arada sunularak, sakinlerine huzurlu bir yaşam alanı tanımlanıyor',
+            en: 'Our first phase project, which laid the foundations of the Kaplanlar residential series, brings a new breath to the living standards in the region with its large-scale structure of 72 apartments. Our project, which combines solid engineering infrastructure and modern architectural lines, stands out with its spacious social areas, high material quality, and flawless workmanship. In this structure brought to life under the assurance of Tezel, aesthetics and functionality are offered together, defining a peaceful living space for its residents.'
         }
     },
     'p2': { 
@@ -218,8 +218,8 @@ const projectsData = {
         status: { tr: 'tamamlandı', en: 'Completed' },
         year: '2019',
         desc: { 
-            tr: 'İstanbul’un en hareketli noktalarından biri olan Mecidiyeköy’de yükselen The Craton Hotel, modern mimarisi ve lüks detaylarıyla şehrin prestijli yapılarından biri olarak öne çıkıyor. Toplamda 127 odadan oluşan bu 5 yıldızlı konaklama projesinin işçilik süreçleri ve uygulama aşamaları tarafımızca titizlikle yürütülmüştür.Otel bünyesindeki alanların tüm ince işçilik dokunuşları, projenin yüksek kalite standartlarına uygun olarak tamamlanmıştır. Şehrin merkezinde, estetiği ve dayanıklılığı bir araya getiren bu proje, uygulama konusundaki uzmanlığımızın en güçlü örneklerinden biridir.',
-            en: 'Rising in one of Istanbul’s busiest areas, Mecidiyeköy, The Craton Hotel stands out as one of the city’s prestigious structures with its modern architecture and luxurious details. Comprising a total of 127 rooms, this 5-star accommodation project was meticulously executed by us in terms of workmanship processes and implementation stages. All the fine craftsmanship touches in the areas within the hotel were completed in accordance with the project’s high-quality standards. Located in the heart of the city, this project, which combines aesthetics and durability, is one of the strongest examples of our expertise in implementation.'
+            tr: 'İstanbul’un prestijli turizm duraklarından The Craton Otel’in tüm ince işçilik ve uygulama süreçlerini, başından sonuna kadar Tezel güvencesiyle bizzat gerçekleştirdik. Otelin her bir noktasındaki teknik detaylarda, malzeme seçiminde ve estetik dokunuşlarda sorumluluğu tamamen üstlendik. Profesyonel uygulama disiplinimizle, projenin başından teslim aşamasına kadar her detayda ustalığımızı konuşturarak otelin yüksek standartlı atmosferini gerçeğe dönüştürdük.',
+            en: 'We personally executed all the fine workmanship and application processes of The Craton Hotel, one of Istanbul’s prestigious tourism destinations, under the assurance of Tezel. We took full responsibility for the technical details, material selection, and aesthetic touches in every corner of the hotel. With our professional application discipline, we showcased our craftsmanship in every detail from the beginning of the project to the delivery phase, transforming the hotel’s high-standard atmosphere into reality.'
         }
     },
     'p3': { 
@@ -228,10 +228,10 @@ const projectsData = {
         img: 'img/terziog4.jpg',
         loc: { tr: 'Van/Terzıoglu', en: 'Van/Terzıoglu' },
         status: { tr: 'Tamamlandı', en: 'Completed' },
-        year: '2023',
+        year: '2020',
         desc: { 
-            tr: 'Geleceğin yaşanabilir şehirlerini tasarlamak amacıyla hazırlanan bu master plan çalışması, çevre dostu ulaşım ağlarını kapsamaktadır.',
-            en: 'This master plan study, prepared to design the livable cities of the future, covers eco-friendly transportation networks.'
+            tr: 'Yaşam Kent Evleri, şehrin en değerli akslarından biri olan Terzioğlu Caddesi üzerinde konumlanan, modern şehir yaşamını konforla buluşturan özel bir konut projesidir. 2+1 and 3+1 daire seçenekleriyle farklı yaşam ihtiyaçlarına hitap eden proje, ferah peyzaj alanları, titizlikle tercih edilen yapı malzemeleri ve merkezi konumuyla öne çıkmaktadır. Günlük yaşamın tüm olanaklarına kolay erişim sunarken, sakinlerine huzurlu ve nitelikli bir yaşam deneyimi vadeder.',
+            en: 'Yaşam Kent Residences is a special residential project located on Terzioğlu Street, one of the most valuable axes of the city, combining modern urban living with comfort. Catering to different lifestyle needs with 2+1 and 3+1 apartment options, the project stands out with its spacious landscaped areas, carefully selected building materials, and central location. While providing easy access to all daily life amenities, it promises residents a peaceful and quality living experience.'
         }
     }
 };

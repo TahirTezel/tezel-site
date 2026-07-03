@@ -49,8 +49,6 @@ const translations = {
         lbl_year: "Year:"
     }
 };
-
-// 2. MİMARİDEN ENTEGRE EDİLEN PROJE DETAYLARI VERİTABANI
 const projectDescriptions = {
     'tezel-kaplan-evleri-2-etap': { 
         tr: { 
@@ -71,7 +69,7 @@ const projectDescriptions = {
             t: "Edremit Projesi",
             status: "Devam Ediyor",
             location: "Van / Edremit",
-            d: "Edremit'in en merkezi konumunda yükselen projemiz, 1+1 daire anlayışına ultra lüks ve ferah bir boyut getiriyor. Büyük cam cepheleri, yüksek tavan yapısı ve fonksiyonel iç mekanlarıyla her metrekaresi konfor odaklı tasarlandı. Tezel güvencesiyle; birinci sınıf malzeme kalitesi, kusursuz işçilik ve ileri düzey mühendislik altyapısını bir araya getiren bu özel yapı, Edremit'te seçkin bir yaşam alanı sunuyor."
+            d: "Edremit'in en merkezi konumunda yükselen projemiz, 1+1 daire anlayışına ultra lüks ve ferah bir boyut getiriyor. Büyük cam cepheleri, yüksek tavan yapısı and fonksiyonel iç mekanlarıyla her metrekaresi konfor odaklı tasarlandı. Tezel güvencesiyle; birinci sınıf malzeme kalitesi, kusursuz işçilik ve ileri düzey mühendislik altyapısını bir araya getiren bu özel yapı, Edremit'te seçkin bir yaşam alanı sunuyor."
         },
         en: {
             t: "Edremit Project",
@@ -80,7 +78,7 @@ const projectDescriptions = {
             d: "Our project, rising in the most central location of Edremit, brings an ultra-luxurious and spacious dimension to the 1+1 apartment concept. Designed with comfort in mind, every square meter features large glass facades, high ceilings, and functional interiors. With Tezel's assurance, this special structure combines first-class material quality, flawless craftsmanship, and advanced engineering infrastructure, offering a distinguished living space in Edremit."
         }
     },
-    'Tezel Terzioğlu projesi': {
+    'tezel-merkez-projesi': {
         tr: {
             t: "Tezel Terzioğlu Projesi",
             status: "Devam Ediyor",
@@ -94,12 +92,12 @@ const projectDescriptions = {
             d: "Our new project, located in the popular Terzioğlu area of Van, combines modern architecture with comfortable living. Built with aesthetic exterior design, high-quality materials, and functional interior solutions, every detail in this structure is planned to enhance the living standards of its residents. With Tezel's assurance, this project brings together solid engineering and flawless craftsmanship, offering a prestigious living experience in the heart of Terzioğlu."
         }
     },
-    'Tezel-Kaplan-Evleri-1-Etap': { 
+    'tezel-kaplan-evleri-1-etap': { 
         tr: { 
             t: "Tezel Kaplan Evleri 1. Etap", 
             status: "Tamamlandı",
             location: "Van / İpekyolu",
-            d: "Kaplanlar konut serisinin temellerini atan 1. Etap projemiz, 72 dairelik geniş ölçekli yapısıyla bölgedeki yaşam standartlarına yeni bir soluk getiriyor. Sağlam mühendislik altyapısı ve modern mimari çizgilerin birleştiği projemiz; geniş sosyal alanları, yüksek malzeme kalitesi ve kusursuz işçiliğiyle dikkat çekiyor. Tezel güvencesiyle hayata geçirilen bu yapıda, estetik ve fonksiyonellik bir arada sunularak, sakinlerine huzurlu bir yaşam alanı tanımlanıyor" 
+            d: "Kaplanlar konut serisinin temellerini atan 1. Etap projemiz, 72 dairelik geniş ölçekli yapısıyla bölgedeki yaşam standartlarına yeni bir soluk getiriyor. Sağlam mühendislik altyapısı ve modern mimari çizgilerin birleştiği projemiz; geniş sosyal alanları, yüksek malzeme kalitesi og kusursuz işçiliğiyle dikkat çekiyor. Tezel güvencesiyle hayata geçirilen bu yapıda, estetik ve fonksiyonellik bir arada sunularak, sakinlerine huzurlu bir yaşam alanı tanımlanıyor" 
         },
         en: { 
             t: "Tezel Kaplan Houses Phase 1", 
@@ -108,12 +106,12 @@ const projectDescriptions = {
             d: "Our Phase 1 project, which laid the foundations of the Kaplanlar residential series, brings a new breath to the living standards in the region with its large-scale structure of 72 apartments. Combining solid engineering infrastructure with modern architectural lines, our project stands out with its spacious social areas, high material quality, and flawless craftsmanship. Brought to life with Tezel's assurance, this structure offers a peaceful living space where aesthetics and functionality are presented together." 
         } 
     },
-    'Tezel-Yasamkent-Evleri': { 
+    'yasamkent-evleri': { 
         tr: { 
             t: "Yaşamkent Evleri", 
             status: "Tamamlandı",
             location: "Van / Merkez",
-            d: "Yaşam Kent Evleri, şehrin en değerli akslarından biri olan Terzioğlu Caddesi üzerinde konumlanan, modern şehir yaşamını konforla buluşturan özel bir konut projesidir. 2+1 ve 3+1 daire seçenekleriyle farklı yaşam ihtiyaçlarına hitap eden proje, ferah peyzaj alanları, titizlikle tercih edilen yapı malzemeleri ve merkezi konumuyla öne çıkmaktadır. Günlük yaşamın tüm olanaklarına kolay erişim sunarken, sakinlerine huzurlu ve nitelikli bir yaşam deneyimi vadeder." 
+            d: "Yaşam Kent Evleri, şehrin en değerli akslarından biri olan Terzioğlu Caddesi üzerinde konumlanan, modern şehir yaşamını konforla buluşturan özel bir konut projesidir. 2+1 and 3+1 daire seçenekleriyle farklı yaşam ihtiyaçlarına hitap eden proje, ferah peyzaj alanları, titizlikle tercih edilen yapı malzemeleri ve merkezi konumuyla öne çıkmaktadır. Günlük yaşamın tüm olanaklarına kolay erişim sunarken, sakinlerine huzurlu ve nitelikli bir yaşam deneyimi vadeder." 
         }, 
         en: { 
             t: "Yasamkent Houses", 
@@ -122,7 +120,7 @@ const projectDescriptions = {
             d: "Yasamkent Houses is a special residential project located on Terzioğlu Street, one of the most valuable axes of the city, combining modern urban living with comfort. Catering to different lifestyle needs with 2+1 and 3+1 apartment options, the project stands out with its spacious landscaped areas, carefully selected building materials, and central location. It offers easy access to all daily life amenities while promising residents a peaceful and high-quality living experience." 
         } 
     },
-    'Tezel-Sihke-Evleri': { 
+    'tezel-sihke-evleri': { 
         tr: { 
             t: "Tezel Sıhke Evleri", 
             status: "Tamamlandı",
@@ -136,7 +134,7 @@ const projectDescriptions = {
             d: "Situated on Sıhke Avenue—one of Van’s key transportation routes—directly across from Boyalar Mosque and right next to the Conforium Hotel, Tezel Sıhke Evleri is a distinctive residential project comprising a total of 44 apartments (in 1+1 and 2+1 layouts) and five street-level retail units. Offering a location close to the city center that simplifies daily life, the project presents a compelling option for both living and investment, thanks to its functional apartment layouts, high construction standards, and architecture that integrates seamlessly with the streetscape." 
         }
     },
-    'The-Mercure-Hotel': {
+    'the-merucure-otel': {
         tr: {
             t: "The Mercure Otel",
             status: "Tamamlandı",
@@ -150,7 +148,7 @@ const projectDescriptions = {
             d: "In the Mercure Hotel project, located in Istanbul's dense and prestigious tourism network, we implemented the fine craftsmanship processes that define the quality of the space with Tezel's assurance. In every detail that forms the aesthetic texture of the interior, we combined high material standards with professional application discipline. By focusing on details that reflect the spirit of design and offer long-lasting use, we added an aesthetic signature to the hotel's comfortable atmosphere."
         }
     },
-    'The-Craton-Hotel': {
+    'the-craton-otel': {
         tr: {
             t: "The Craton Otel",
             status: "Tamamlandı",
@@ -164,7 +162,7 @@ const projectDescriptions = {
             d: "We personally carried out all the fine craftsmanship and application processes of The Craton Hotel, one of Istanbul's prestigious tourism stops, with Tezel's assurance from start to finish. We took full responsibility for the technical details, material selection, and aesthetic touches at every point of the hotel. With our professional application discipline, we showcased our mastery in every detail from the beginning of the project to the delivery phase, transforming the hotel's high-standard atmosphere into reality."
         }
     },
-    'Tezel-Family-Residences': {
+    'tezel-family-residences': {
         tr: {
             t: "Tezel Family Residences",
             status: "Tamamlandı",
@@ -178,12 +176,12 @@ const projectDescriptions = {
             d: "Located in the city center of Van, behind the VATSO building and within walking distance to Atatürk High School, Tezel Family Apartments is a modern residential project consisting of a total of 32 one-bedroom apartments. Thanks to its central location, the project offers easy access to educational institutions, shopping points, and all essential services for daily life. With compact and functional living spaces, it combines the dynamism of city life with comfort. With its quality construction approach and meticulous craftsmanship, it provides a qualified living space that can be preferred for both individual living and investment purposes."
         }
     },
-    'Tezel-Ikinisan-Apartmani': {
+    'iki-nisan-apartmani': {
         tr: {
-            t: "Tezel Iki Nisan Apartmanı",
+            t: "Iki Nisan Apartmanı",
             status: "Tamamlandı",
             location: "Van / İpekyolu",
-            d: "Van AVM'ye yakın konumda, caddeye sıfır olarak inşa edilen Tezel Iki Nisan Apartmanı, toplam 24 adet 3+1 daireden oluşan seçkin bir konut projesidir. Geniş ve kullanışlı daire planlanıyla aile yaşamına uygun bir anlayışla tasarlanan proje, ana ulaşım güzergâhlarına ve günlük ihtiyaç noktalarına kolay erişim avantajı sunmaktadır. Konfor, kalite ve işlevselliği bir araya getiren Tezel Iki Nisan Apartmanı, merkezi konumu ve özenli yapı anlayışıyla sakinlerine ayrıcalıklı bir yaşam deneyimi sunmaktadır."
+            d: "Van AVM'ye yakın konumda, caddeye sıfır olarak inşa edilen Tezel Iki Nisan Apartmanı, toplam 24 adet 3+1 daireden oluşan seçkin bir konut projesidir. Geniş ve kullanışlı daire planlanıyla aile yaşamına uygun bir anlayışla tasarlanan proje, ana ulaşım güzergâhlarına ve günlük ihtiyaç noktalarına kolay erişim avantajı sunmaktadır. Konfor, kalite ve işlevselliği bir araya getiren Tezel Iki Nisan Apartmanı, merkezi konumu ve özenli yapı anlayışısıyla sakinlerine ayrıcalıklı bir yaşam deneyimi sunmaktadır."
         },
         en: {
             t: "Iki Nisan Apartment",
@@ -192,7 +190,7 @@ const projectDescriptions = {
             d: "Located close to Van AVM and built right on the street, Iki Nisan Apartment is an exclusive residential project consisting of a total of 24 three-bedroom apartments. Designed with spacious and functional apartment layouts suitable for family living, the project offers easy access to main transportation routes and daily necessities. Combining comfort, quality, and functionality, Iki Nisan Apartment provides its residents with a privileged living experience through its central location and meticulous construction approach."
         }
     },
-    'Masal-Evi-Kresi': { 
+    'masal-evi-kresi': { 
         tr: { 
             t: "Masal Evi Kreşi", 
             status: "Tamamlandı",
